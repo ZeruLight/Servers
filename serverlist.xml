@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<server_groups>
+  <group idx='0' nam='Localhost' ip='127.0.0.1' port='53312'/>
+</server_groups>
