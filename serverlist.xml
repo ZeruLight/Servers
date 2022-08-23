@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="shift_jis">
 <server_groups>
   <group idx='0' nam='Default' ip=''/>
-  <group idx='1' nam='Localhost' ip='127.0.0.1' port='53312'/>
-  <group idx='2' nam='Shenanigans' ip='129.80.44.23' port='53312'/>
-  <group idx='3' nam='Rain' ip='103.186.0.221' port='53312'/>
+  <group idx='1' nam='Shenanigans' ip='129.80.44.23' port='53312'/>
+  <group idx='2' nam='Rain' ip='103.186.0.221' port='53312'/>
 </server_groups>
