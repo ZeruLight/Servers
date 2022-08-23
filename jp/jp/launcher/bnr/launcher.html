@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>launcher banner</title>
+</head>
+
+<body>
+<ul>
+<!--###content###-->
+<li><a href="/sp/news/14322.html"><img src="../images/launcher/1030_0.jpg" alt="MHFグランドフィナーレ！" /></a></li>		
+<li><a href="http://members.mhf-z.jp/contents/regular_event/carnival/"><img src="../images/launcher/0801_3.jpg" alt="第147回 褒賞祭（勝ちネコ）" /></a></li>
+<li><a href="/sp/news/14317.html"><img src="../images/launcher/0705_3.jpg" alt="レジェンドラスタがやって来る！" /></a></li>		
+<li><a href="/sp/news/14314.html"><img src="../images/launcher/1211_11.jpg" alt="ハンター諸君へ感謝を込めて！" /></a></li>	
+<li><a href="/sp/news/14318.html"><img src="../images/launcher/reg_mezefes.jpg" alt="ミズキの足のヒミツ" /></a></li>
+<!--###content###-->
+<!--
+<li><a href="/sp/news/14291.html"><img src="img/launcher/2019/1120_1.jpg" alt="狩コ39時間プレゼント" /></a></li>
+<li><a href="http://members.mhf-z.jp/contents/regular_event/diva/"><img src="img/launcher/regular/reg_syueisen1.jpg" alt="第31回歌姫狩衛戦 祈祷の章" /></a></li>
+<li><a href="http://members.mhf-z.jp/contents/regular_event/diva/"><img src="img/launcher/regular/reg_syueisen2.jpg" alt="第30回歌姫狩衛戦 戦歌の章" /></a></li>
+<li><a href="http://members.mhf-z.jp/contents/regular_event/carnival/"><img src="img/launcher/2019/0410_0.jpg" alt="第136回 入魂祭" /></a></li>
+<li><a href="/sp/news/13815.html"><img src="img/launcher/regular/reg_musou2.jpg" alt="無双＆双頭襲撃戦" /></a></li>
+<li><a href="/sp/news/13808.html"><img src="img/launcher/2019/0315_1.jpg" alt="HLコース無料開放" /></a></li>
+<li><a href="/sp/news/13807.html"><img src="img/launcher/2019/0315_2.jpg" alt="ウェルカムバックCP" /></a></li>
+-->
+</ul>
+<script>
+  (function(){
+    var aa = document.getElementsByTagName('a'),
+				dom = location.host;
+    for (var i = 0; i < aa.length; i++) {
+      if (aa[i].getAttribute('href').indexOf('/sp/news/') === 0) {
+        if (dom.indexOf('debug-') >= 0) {
+          aa[i].setAttribute('href', aa[i].href.split('debug-').join('stage-'));
+        }
+      } else {
+				if (dom.indexOf('debug-') >= 0) {
+					aa[i].setAttribute('href', aa[i].href.split('mhf-z.jp').join('mhf-z.net'));
+					aa[i].setAttribute('href', aa[i].href.split('http://').join('http://debug-'));
+				} else if (dom.indexOf('stage-') >= 0) {
+					aa[i].setAttribute('href', aa[i].href.split('mhf-z.jp').join('mhf-z.net'));
+					aa[i].setAttribute('href', aa[i].href.split('http://').join('http://stage-'));
+				}
+			}
+    }
+  })();
+</script>
+</body>
+</html>
