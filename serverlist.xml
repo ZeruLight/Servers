@@ -4,4 +4,6 @@
   <group idx='1' nam='Localhost' ip='127.0.0.1' port='53312'/>
   <group idx='2' nam='Shenanigans' ip='129.80.44.23' port='53312'/>
   <group idx='3' nam='Rain' ip='103.186.0.221' port='53312'/>
+  <group idx='4' nam='Hunsterverse' ip='129.213.54.221' port='53312'/>
+  <group idx='5' nam='Renewal' ip='70.80.86.153' port='53312'/>
 </server_groups>
