@@ -80,70 +80,69 @@ function duc(e) {
     return decodeURIComponent(_EUCS[e])
 } !function () {
     "use strict";
-    _EUCS.xhrspr = "%3C!--%23%23%23content%23%23%23--%3E",
-        _EUCS.dmsrvs = "%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3E%3Cserver_groups%3E%3Cgroup%20nam%3D%22Server%E2%91%A0%22%20cog%3D%22pre%22%20%2F%3E%3C%2Fserver_groups%3E",
-        _EUCS.anch = "You%20can%20create%20a%20new%20character.%20%3Cbr%3E%20Press%20'Start%20Game'%20to%20create%20your%20character.",
-        _EUCS.cwpt = "Current%20Weapon",
-        _EUCS.pcst = "Last%20Login",
-        _EUCS.afac = "Unauthorised%20access.",
-        _EUCS.afde = "Character%20encoding%20not%20supported.",
-        _EUCS.afnsrv = "Select%20a%20server.",
-        _EUCS.afipe = "Username%20or%20password%20is%20different.",
-        _EUCS.af102 = "The%20server%20is%20busy%20at%20the%20moment.%3Cbr%3EPlease%20try%20again%20later.",
-        _EUCS.af301 = "Customer%20authorisation%20is%20currently%20suspended.",
-        _EUCS.af304 = "Password%20has%20been%20incorrectly%20entered%20consecutively.%3Cbr%3EAuthentication%20is%20temporarily%20suspended.%3Cbr%3EPlease%20wait%20an%20hour%20before%20logging%20in.",
-        _EUCS.aferr = "Unknown%20error%20occurred.",
-        _EUCS.af321 = "The%20security%20card%20data%20is%20different.",
-        _EUCS.afipl = "After%20entering%20your%20username%20and%20password%2C%3Cbr%3Eselect%20your%20server%20and%20press%20the%20'Login'%20button.",
-        _EUCS.uflm0 = "It%20is%20currently%20under%20server%20maintenance%20and%20cannot%20be%20activated.%3Cbr%3EPlease%20wait%20for%20a%20while%20until%20the%20service%20starts.",
-        _EUCS.dmb0 = "Register%20now",
-        _EUCS.dmb1 = "re-login",
-        _EUCS.dmb2 = "Delete",
-        _EUCS.dmb3 = "Don't%20delete",
-        _EUCS.dmb4 = "Close",
-        _EUCS.dmb5 = "Yes",
-        _EUCS.dmb6 = "No",
-        _EUCS.dmb7 = "Buy%20now",
-        _EUCS.dmb8 = "Not%20now",
-        _EUCS.dmb9 = "Continue%20without%20purchasing.",
-        _EUCS.dmt0 = "Trial%20course%20registration%20is%20required.%3Cbr%3ERegister%20for%20a%20trial%20course%20below.%3Cbr%3E(You%20can%20register%20for%20free).",
-        _EUCS.dmt1 = "Once%20you%20have%20registered%20for%20the%20trial%20course%2C%3Cbr%3Eplease%20wait%20a%20moments%20before%20pressing%3Cbr%3Ethe%20login%20button.",
-        _EUCS.dmca0 = "Purchase%20additional%20character%20rights.%3Cbr%3EPress%20BUY%20NOW%20below.%3Cbr%3E%EF%BC%88Browser%20will%20open%EF%BC%89",
-        _EUCS.dmca1 = "Once%20you%20have%20completed%20the%20purchase%20of%20additional%20character%20rights%2C%3Cbr%3Eplease%20wait%20a%20moment%20and%20then%20press%20the%20login%20button%20below.",
-        _EUCS.dmcd0 = "Are%20you%20sure%20you%20want%20to%20Delete%20the%20character%3Cbr%3E",
-        _EUCS.dmcd1 = "%3Cspan%20class%3D%22uid%22%3E%20(ID%3A",
-        _EUCS.dmcd2 = ")%20%3C%2Fspan%3E%3F%3Cbr%3E%3Cdiv%20class%3D%22sp%22%3E%3C%2Fdiv%3E",
-        _EUCS.dmcd3 = "%3Cspan%20class%3D%22attention%22%3EIf%20deleted%2C%20the%20hunter%20slot%20will%20not%20be%20returned%2C%3Cbr%3Eand%20will%20be%20delete%20forever.%3C%2Fspan%3E",
-        _EUCS.dmcd4 = "%3Cspan%20class%3D%22notes%22%3E%E3%80%90Please%20note%EF%BC%81%E3%80%91%3Cbr%3EDeleting%20a%20character%20does%20not%20constitute%20a%20character%20addition%20right.%3Cbr%3ETo%20re-create%20the%20character%2C%20you%20will%20need%20to%20%3Cbr%3Epurchase%20a%20new%20character%20addition%20right.%3C%2Fspan%3E",
-        _EUCS.dmcd4_2 = "%3Cspan%20class%3D%22notes%22%3EYou're%20about%20to%20remove%20the%20last%20character.%3Cbr%3E%20If%20you%20delete%20all%20the%20characters%2C%3Cbr%3Eone%20character%20for%20the%20basic%20contract%20guarantee%20will%20be%20presented.%3C%2Fspan%3E",
-        _EUCS.dmcd5 = "Character%20%3Cbr%3E",
-        _EUCS.dmcd6 = ")%20%3C%2Fspan%3ETo%20delete%3Cbr%3E",
-        _EUCS.dmcd7 = "%3Cspan%20class%3D%22attention%22%3EEnter%20the%20ID%20of%20the%20character%20you%20want%20to%20delete%20and%20click%20the%20%3Cbr%3E%20%5BDelete%5D%20button.%3C%2Fspan%3E%3Cbr%3E%3Cdiv%20class%3D%22sp%22%3E%3C%2Fdiv%3E",
-        _EUCS.dmcd8 = "%3Cform%20action%3D%22javascript%3Avoid(0)%3B%22%3E%3Cinput%20type%3D%22text%22%20border%3D%220%22%20align%3D%22left%22%20name%3D%22del_uid%22%20id%3D%22del_uid%22%3E%3C%2Fform%3E",
-        _EUCS.dmcd9 = "The%20character%20could%20not%20be%20deleted.%3Cbr%3E%3Cdiv%20class%3D%22sp%22%3E%3C%2Fdiv%3E%3Cspan%20class%3D%22attention%22%3EThe%20specified%20character%20ID%20and%20the%20entered%20ID%20do%20not%20match.%3C%2Fspan%3E",
-        _EUCS.dmcd10 = ")%3Cbr%3EIs%20being%20deleted.%20%3Cbr%3E%20Please%20wait%20for%20a%20while.",
-        _EUCS.dmcd11 = "Failed%20to%20delete%20the%20character.%20%3Cbr%3E%20Please%20wait%20for%20a%20while%20and%20try%20again.",
-        _EUCS.dmcd12 = "Failed%20to%20delete%20the%20character.%20%3Cbr%3E%20To%20delete%20all%20characters%20%3Cbr%3E%20Please%20wait%20at%20least%207%20days%20and%20try%20again.",
-        _EUCS.dmcd13 = "%3Cspan%20class%3D%22attention%22%3EGift%20of%20characters%20for%20basic%20contract%20guarantee%20%3C%2F%20span%3E%20%3Cbr%3E%20%3Cspan%3E%20All%20characters%20have%20been%20deleted.%20%3Cbr%3E%20We%20will%20present%20one%20character%20for%20the%20basic%20contract%20guarantee!%20!!%3C%2Fspan%3E%3Cbr%3E%3Cspan%20class%3D%22notes%22%3E%E2%80%BB%20To%20delete%20this%20character%2C%20it%20will%20take%207%20days%20from%20today.%3C%2Fspan%3E",
-        _EUCS.dmcd14 = "The%20character%20has%20been%20deleted.",
-        _EUCS.dmhl0 = "The%20Hunter%20Life%20Course%20has%20expired.%20%3Cbr%3E%20Please%20purchase%20the%20Hunter%20Life%20Course%20from%20the%20following.%20%3Cbr%3E%20(Browser%20opens)",
-        _EUCS.dmhl1 = "Once%20you%20have%20purchased%20the%20Hunter%20Life%20Course%2C%20%3Cbr%3E%20please%20wait%20a%20while%20and%20then%20%3Cbr%3E%20press%20the%20re-login%20button%20below.",
-        _EUCS.dmgs0 = "Selected%20character%20%3Cbr%3E",
-        _EUCS.dmgs1 = ")%3C%2Fspan%3E%3Cbr%3E%3Cbr%3EStart%20the%20game%20with%20this%20character.%20%3Cbr%3E%20Are%20you%20sure%3F",
-        _EUCS.SIGN_EFAILED = "Failed%20to%20communicate%20with%20the%20authentication%20server",
-        _EUCS.SIGN_EILLEGAL = "Authentication%20was%20canceled%20due%20to%20incorrect%20input",
-        _EUCS.SIGN_EALERT = "An%20error%20occurred%20in%20the%20processing%20of%20the%20authentication%20server",
-        _EUCS.SIGN_EALERT_COOP = "You%20have%20selected%20an%20account%20that%20has%20not%20completed%20COG%20integration%2C%20%3Cbr%3E%20or%20a%20server%20that%20you%20cannot%20log%20in%20with%20this%20account.",
-        _EUCS.SIGN_EABORT = "Authentication%20server%20internal%20processing%20terminated%20abnormally",
-        _EUCS.SIGN_ERESPONSE = "Processing%20ended%20due%20to%20an%20error%20in%20the%20authentication%20response",
-        _EUCS.SIGN_EDATABASE = "Failed%20to%20access%20the%20database",
-        _EUCS.SIGN_ESUSPEND = "This%20account%20is%20suspended.%20Please%20check%20your%20email%20for%20more%20information",
-        _EUCS.SIGN_EELIMINATE = "This%20account%20is%20permanently%20suspended.%20Please%20check%20your%20email%20for%20more%20information",
-        _EUCS.SIGN_ECLOSE_EX = "The%20login%20process%20is%20very%20busy.%20%3Cbr%3E%20Please%20log%20in%20again%20after%20a%20while.",
-        _EUCS.SIGN_EIPADDR = "You%20cannot%20connect%20to%20the%20game%20server%20from%20your%20environment.%20%3Cbr%3E%20For%20details%2C%20please%20write%20this%20error%20message%20and%20contact%20us%20from%20the%20%3Cbr%3E%20MHF-Z%20Inquiry%20Desk.",
-        _EUCS.SIGN_EOTHER = "ID%20authentication%20failed.",
-        _EUCS.SIGN_EAPP = "Authentication%20failed%20with%20an%20unexpected%20error%20in%20the%20app.",
-        _EUCS.SRV_MNT = "%3Cspan%20class%3D%22attention%22%3EYou%20can't%20log%20in%20because%20the%20server%20is%20currently%20under%20maintenance.%20%3C%2F%20span%3E%20%3Cbr%3E%20%3Cbr%3E%20Please%20wait%20for%20a%20while%20until%20the%20maintenance%20is%20completed."
+    _EUCS.xhrspr="%3C!--%23%23%23content%23%23%23--%3E",
+    _EUCS.dmsrvs="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3E%3Cserver_groups%3E%3Cgroup%20nam%3D%22%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E2%91%A0%22%20cog%3D%22pre%22%20%2F%3E%3C%2Fserver_groups%3E",
+    _EUCS.anch="%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%92%E6%96%B0%E8%A6%8F%E4%BD%9C%E6%88%90%E5%8F%AF%E8%83%BD%E3%81%A7%E3%81%99%E3%80%82%3Cbr%3E%E3%80%8C%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%80%8D%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%97%E3%81%A6%E3%80%81%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%BE%E3%81%97%E3%82%87%E3%81%86%E3%80%82",
+    _EUCS.cwpt="%E7%8F%BE%E5%9C%A8%E3%81%AE%E8%A3%85%E5%82%99%E6%AD%A6%E5%99%A8%E7%A8%AE",
+    _EUCS.pcst="%E5%89%8D%E5%9B%9E%E6%8E%A5%E7%B6%9A",
+    _EUCS.afac="%E4%B8%8D%E6%AD%A3%E3%81%AA%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%A7%E3%81%99%E3%80%82",
+    _EUCS.afde="%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E6%96%87%E5%AD%97%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%A7%E3%81%99%E3%80%82",
+    _EUCS.afnsrv="%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%82%92%e9%81%b8%e6%8a%9e%e3%81%97%e3%81%a6%e3%81%8f%e3%81%a0%e3%81%95%e3%81%84%e3%80%82",
+    _EUCS.afipe="COG%20ID%E3%81%BE%E3%81%9F%E3%81%AF%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89%E3%81%8C%E9%81%95%E3%81%84%E3%81%BE%E3%81%99%E3%80%82",
+    _EUCS.af102="%E3%81%9F%E3%81%A0%E3%81%84%E3%81%BE%E3%82%B5%E3%83%BC%E3%83%90%E3%81%8C%E8%BE%BC%E3%81%BF%E5%90%88%E3%81%A3%E3%81%A6%E3%81%8A%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82%3Cbr%3E%E7%94%B3%E3%81%97%E8%A8%B3%E3%81%82%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%81%8C%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F%E3%81%8A%E5%BE%85%E3%81%A1%E4%B8%8B%E3%81%95%E3%81%84%E3%80%82",
+    _EUCS.af301="%E7%8F%BE%E5%9C%A8%E3%81%8A%E5%AE%A2%E6%A7%98%E3%81%AE%E8%AA%8D%E8%A8%BC%E3%82%92%E4%B8%80%E6%99%82%E5%81%9C%E6%AD%A2%E3%81%97%E3%81%A6%E3%81%8A%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82",
+    _EUCS.af304="%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89%E3%82%92%E9%80%A3%E7%B6%9A%E3%81%97%E3%81%A6%E9%96%93%E9%81%95%E3%82%8F%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%3Cbr%3E%E8%AA%8D%E8%A8%BC%E3%82%92%E4%B8%80%E6%99%82%E5%81%9C%E6%AD%A2%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%3Cbr%3E%EF%BC%91%E6%99%82%E9%96%93%E3%81%BB%E3%81%A9%E5%BE%85%E3%81%A3%E3%81%A6%E3%81%8B%E3%82%89%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%82%92%E3%81%8A%E9%A1%98%E3%81%84%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82",
+    _EUCS.aferr="%E4%B8%8D%E6%98%8E%E3%81%AA%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82",
+    _EUCS.af321="%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%AB%E3%83%BC%E3%83%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%8C%E9%81%95%E3%81%84%E3%81%BE%E3%81%99%E3%80%82",
+    _EUCS.afipl="%EF%BC%A9%EF%BC%A4%E3%80%81%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89%E3%82%92%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%9F%E5%BE%8C%E3%80%81%3Cbr%3E%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%92%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%80%8C%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%80%8D%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82",
+    _EUCS.uflm0="%E7%8F%BE%E5%9C%A8%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E4%B8%AD%E3%81%AE%E3%81%9F%E3%82%81%E3%80%81%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%3Cbr%3E%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E9%96%8B%E5%A7%8B%E3%81%BE%E3%81%A7%E4%BB%8A%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F%E3%81%8A%E5%BE%85%E3%81%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82",
+    _EUCS.dmb0="%E4%BB%8A%E3%81%99%E3%81%90%E7%99%BB%E9%8C%B2",
+    _EUCS.dmb1="%E5%86%8D%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3",
+    _EUCS.dmb2="%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B",
+    _EUCS.dmb3="%E5%89%8A%E9%99%A4%E3%81%97%E3%81%AA%E3%81%84",
+    _EUCS.dmb4="%E9%96%89%E3%81%98%E3%82%8B",
+    _EUCS.dmb5="%E3%81%AF%E3%81%84",
+    _EUCS.dmb6="%E3%81%84%E3%81%84%E3%81%88",
+    _EUCS.dmb7="%E4%BB%8A%E3%81%99%E3%81%90%E8%B3%BC%E5%85%A5",
+    _EUCS.dmb8="%E8%B3%BC%E5%85%A5%E3%81%97%E3%81%AA%E3%81%84",
+    _EUCS.dmb9="%E8%B3%BC%E5%85%A5%E3%81%97%E3%81%AA%E3%81%84%E3%81%A7%E7%B6%9A%E8%A1%8C",
+    _EUCS.dmt0="%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%BC%E3%82%B9%E3%81%AE%E7%99%BB%E9%8C%B2%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%A7%E3%81%99%E3%80%82%3Cbr%3E%E4%B8%8B%E8%A8%98%E3%82%88%E3%82%8A%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%BC%E3%82%B9%E3%81%AE%E7%99%BB%E9%8C%B2%E3%82%92%E8%A1%8C%E3%81%A3%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%3Cbr%3E%EF%BC%88%E7%84%A1%E6%96%99%E3%81%A7%E7%99%BB%E9%8C%B2%E3%82%92%E8%A1%8C%E3%81%88%E3%81%BE%E3%81%99%EF%BC%89",
+    _EUCS.dmt1="%E3%83%88%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%AB%E3%82%B3%E3%83%BC%E3%82%B9%E3%81%AE%E7%99%BB%E9%8C%B2%E3%81%8C%E5%AE%8C%E4%BA%86%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%82%89%E3%80%81%3Cbr%3E%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F%E6%99%82%E9%96%93%E3%82%92%E7%BD%AE%E3%81%84%E3%81%A6%E3%81%8B%E3%82%89%3Cbr%3E%E4%B8%8B%E8%A8%98%E3%81%AE%E5%86%8D%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82",
+    _EUCS.dmca0="%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E8%BF%BD%E5%8A%A0%E6%A8%A9%E3%81%AE%E8%B3%BC%E5%85%A5%E3%82%92%E8%A1%8C%E3%81%AA%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%3Cbr%3E%E4%B8%8B%E8%A8%98%E3%81%AE%E4%BB%8A%E3%81%99%E3%81%90%E8%B3%BC%E5%85%A5%E3%82%92%E6%8A%BC%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%3Cbr%3E%EF%BC%88%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%8C%E9%96%8B%E3%81%8D%E3%81%BE%E3%81%99%EF%BC%89",
+    _EUCS.dmca1="%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E8%BF%BD%E5%8A%A0%E6%A8%A9%E3%81%AE%E8%B3%BC%E5%85%A5%E3%81%8C%E5%AE%8C%E4%BA%86%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%82%89%E3%80%81%3Cbr%3E%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F%E6%99%82%E9%96%93%E3%82%92%E7%BD%AE%E3%81%84%E3%81%A6%E3%81%8B%E3%82%89%3Cbr%3E%E4%B8%8B%E8%A8%98%E3%81%AE%E5%86%8D%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82",
+    _EUCS.dmcd0="%E6%9C%AC%E5%BD%93%E3%81%AB%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%3Cbr%3E",
+    _EUCS.dmcd1="%3Cspan%20class%3D%22uid%22%3E%20(ID%3A",
+    _EUCS.dmcd2=")%20%3C%2Fspan%3E%E3%82%92%E5%89%8A%E9%99%A4%E3%81%97%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F%3Cbr%3E%3Cdiv%20class%3D%22sp%22%3E%3C%2Fdiv%3E",
+    _EUCS.dmcd3="%3Cspan%20class%3D%22attention%22%3E%E5%89%8A%E9%99%A4%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%80%81%E7%8B%A9%E4%BA%BA%E7%94%B3%E8%AB%8B%E5%8F%AF%E8%83%BD%E7%8A%B6%E6%85%8B%E3%81%AB%E3%81%AF%E6%88%BB%E3%82%89%E3%81%9A%3Cbr%3E%E5%AE%8C%E5%85%A8%E3%81%AB%E5%89%8A%E9%99%A4%E3%81%95%E3%82%8C%E3%81%BE%E3%81%99%E3%80%82%3C%2Fspan%3E",
+    _EUCS.dmcd4="%3Cspan%20class%3D%22notes%22%3E%E3%80%90%E3%81%94%E6%B3%A8%E6%84%8F%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%EF%BC%81%E3%80%91%3Cbr%3E%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%92%E5%89%8A%E9%99%A4%E3%81%97%E3%81%A6%E3%82%82%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E8%BF%BD%E5%8A%A0%E6%A8%A9%E3%81%AB%E3%81%AF%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%3Cbr%3E%E5%86%8D%E5%BA%A6%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E8%BF%BD%E5%8A%A0%E6%A8%A9%E3%82%92%3Cbr%3E%E6%96%B0%E3%81%9F%E3%81%AB%E8%B3%BC%E5%85%A5%E3%81%99%E3%82%8B%E5%BF%85%E8%A6%81%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82%3C%2Fspan%3E",
+    _EUCS.dmcd4_2="%3Cspan%20class%3D%22notes%22%3E%E6%9C%80%E5%BE%8C%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%92%E5%89%8A%E9%99%A4%E3%81%97%E3%82%88%E3%81%86%E3%81%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%3Cbr%3E%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%92%E5%89%8A%E9%99%A4%E3%81%97%E3%81%9F%E5%A0%B4%E5%90%88%E3%81%AF%E3%80%81%3Cbr%3E%E5%9F%BA%E6%9C%AC%E5%A5%91%E7%B4%84%E4%BF%9D%E8%A8%BC%E5%88%86%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%92%EF%BC%91%E4%BD%93%E8%B4%88%E5%91%88%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%3C%2Fspan%3E",
+    _EUCS.dmcd5="%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%3Cbr%3E",
+    _EUCS.dmcd6=")%20%3C%2Fspan%3E%E3%82%92%E5%89%8A%E9%99%A4%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%3Cbr%3E",
+    _EUCS.dmcd7="%3Cspan%20class%3D%22attention%22%3E%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AEID%E3%82%92%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%A6%3Cbr%3E%5B%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%5D%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%3C%2Fspan%3E%3Cbr%3E%3Cdiv%20class%3D%22sp%22%3E%3C%2Fdiv%3E",
+    _EUCS.dmcd8="%3Cform%20action%3D%22javascript%3Avoid(0)%3B%22%3E%3Cinput%20type%3D%22text%22%20border%3D%220%22%20align%3D%22left%22%20name%3D%22del_uid%22%20id%3D%22del_uid%22%3E%3C%2Fform%3E",
+    _EUCS.dmcd9="%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%92%E5%89%8A%E9%99%A4%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%81%A7%E3%81%97%E3%81%9F%E3%80%82%3Cbr%3E%3Cdiv%20class%3D%22sp%22%3E%3C%2Fdiv%3E%3Cspan%20class%3D%22attention%22%3E%E6%8C%87%E5%AE%9A%E3%81%97%E3%81%9F%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BCID%E3%81%A8%E5%85%A5%E5%8A%9B%E3%81%95%E3%82%8C%E3%81%9FID%E3%81%8C%E4%B8%80%E8%87%B4%E3%81%97%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%3C%2Fspan%3E",
+    _EUCS.dmcd10=")%3Cbr%3E%E3%82%92%E5%89%8A%E9%99%A4%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%3Cbr%3E%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F%E3%81%8A%E5%BE%85%E3%81%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82",
+    _EUCS.dmcd11="%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E5%89%8A%E9%99%A4%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%3Cbr%3E%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F%E6%99%82%E9%96%93%E3%82%92%E7%BD%AE%E3%81%84%E3%81%A6%E3%81%8B%E3%82%89%E5%86%8D%E5%BA%A6%E5%AE%9F%E8%A1%8C%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82",
+    _EUCS.dmcd12="%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E5%89%8A%E9%99%A4%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%3Cbr%3E%E5%85%A8%E3%81%A6%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%3Cbr%3E7%E6%97%A5%E4%BB%A5%E4%B8%8A%E7%BD%AE%E3%81%84%E3%81%A6%E3%81%8B%E3%82%89%E5%86%8D%E5%BA%A6%E5%AE%9F%E8%A1%8C%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82",
+    _EUCS.dmcd13="%3Cspan%20class%3D%22attention%22%3E%E5%9F%BA%E6%9C%AC%E5%A5%91%E7%B4%84%E4%BF%9D%E8%A8%BC%E5%88%86%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E8%B4%88%E5%91%88%3C%2Fspan%3E%3Cbr%3E%3Cspan%3E%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%8C%E5%89%8A%E9%99%A4%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%3Cbr%3E%E5%9F%BA%E6%9C%AC%E5%A5%91%E7%B4%84%E4%BF%9D%E8%A8%BC%E5%88%86%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%92%3Cbr%3E%EF%BC%91%E4%BD%93%E8%B4%88%E5%91%88%E3%81%97%E3%81%BE%E3%81%99%EF%BC%81%EF%BC%81%3C%2Fspan%3E%3Cbr%3E%3Cspan%20class%3D%22notes%22%3E%E2%80%BB%E3%81%93%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%3Cbr%3E%E6%9C%AC%E6%97%A5%E3%81%8B%E3%82%897%E6%97%A5%E9%96%93%E3%81%AE%E6%9C%9F%E9%96%93%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%A8%E3%81%AA%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82%3C%2Fspan%3E",
+    _EUCS.dmcd14="%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E5%89%8A%E9%99%A4%E3%81%8C%3Cbr%3E%E5%AE%8C%E4%BA%86%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82",
+    _EUCS.dmhl0="%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B3%E3%83%BC%E3%82%B9%E3%81%AE%E6%9C%89%E5%8A%B9%E6%9C%9F%E9%99%90%E3%81%8C%E5%88%87%E3%82%8C%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%3Cbr%3E%E4%B8%8B%E8%A8%98%E3%82%88%E3%82%8A%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B3%E3%83%BC%E3%82%B9%E3%82%92%E8%B3%BC%E5%85%A5%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%3Cbr%3E%EF%BC%88%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%8C%E9%96%8B%E3%81%8D%E3%81%BE%E3%81%99%EF%BC%89",
+    _EUCS.dmhl1="%E3%83%8F%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B3%E3%83%BC%E3%82%B9%E3%81%AE%E8%B3%BC%E5%85%A5%E3%81%8C%E5%AE%8C%E4%BA%86%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%82%89%E3%80%81%3Cbr%3E%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F%E6%99%82%E9%96%93%E3%82%92%E7%BD%AE%E3%81%84%E3%81%A6%E3%81%8B%E3%82%89%3Cbr%3E%E4%B8%8B%E8%A8%98%E3%81%AE%E5%86%8D%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E6%8A%BC%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82",
+    _EUCS.dmgs0="%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%9F%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%3Cbr%3E",
+    _EUCS.dmgs1=")%3C%2Fspan%3E%3Cbr%3E%3Cbr%3E%E3%81%93%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%A7%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%3Cbr%3E%E3%82%88%E3%82%8D%E3%81%97%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F",
+    _EUCS.SIGN_EFAILED="%E8%AA%8D%E8%A8%BC%E3%82%B5%E3%83%BC%E3%83%90%E3%81%A8%E3%81%AE%E9%80%9A%E4%BF%A1%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F",
+    _EUCS.SIGN_EILLEGAL="%E4%B8%8D%E6%AD%A3%E3%81%AA%E5%85%A5%E5%8A%9B%E3%81%AB%E3%82%88%E3%82%8A%E8%AA%8D%E8%A8%BC%E3%81%8C%E4%B8%AD%E6%AD%A2%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F",
+    _EUCS.SIGN_EALERT="%E8%AA%8D%E8%A8%BC%E3%82%B5%E3%83%BC%E3%83%90%E3%81%AE%E5%87%A6%E7%90%86%E3%81%AB%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F",
+    _EUCS.SIGN_EALERT_COOP="COG%e9%80%a3%e6%90%ba%e3%81%8c%e5%ae%8c%e4%ba%86%e3%81%97%e3%81%a6%e3%81%84%e3%81%aa%e3%81%84%e3%82%a2%e3%82%ab%e3%82%a6%e3%83%b3%e3%83%88%e3%80%81%3cbr%3e%e3%81%be%e3%81%9f%e3%81%af%e3%81%93%e3%81%ae%e3%82%a2%e3%82%ab%e3%82%a6%e3%83%b3%e3%83%88%e3%81%a7%e3%83%ad%e3%82%b0%e3%82%a4%e3%83%b3%e3%81%a7%e3%81%8d%e3%81%aa%e3%81%84%e3%82%b5%e3%83%bc%e3%83%90%e3%83%bc%e3%82%92%e9%81%b8%e6%8a%9e%e3%81%97%e3%81%a6%e3%81%84%e3%81%be%e3%81%99%e3%80%82",
+    _EUCS.SIGN_EABORT="%E8%AA%8D%E8%A8%BC%E3%82%B5%E3%83%BC%E3%83%90%E5%86%85%E9%83%A8%E5%87%A6%E7%90%86%E3%81%8C%E7%95%B0%E5%B8%B8%E7%B5%82%E4%BA%86%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F",
+    _EUCS.SIGN_ERESPONSE="%E8%AA%8D%E8%A8%BC%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9%E3%81%AE%E7%95%B0%E5%B8%B8%E3%81%AB%E3%82%88%E3%82%8A%E5%87%A6%E7%90%86%E3%81%8C%E7%B5%82%E4%BA%86%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F",
+    _EUCS.SIGN_EDATABASE="%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%B8%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F",
+    _EUCS.SIGN_ESUSPEND="%E3%81%93%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AF%E4%B8%80%E6%99%82%E5%81%9C%E6%AD%A2%E4%B8%AD%E3%81%A7%E3%81%99%E3%80%82%E8%A9%B3%E7%B4%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AF%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84",
+    _EUCS.SIGN_EELIMINATE="%E3%81%93%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%AF%E6%B0%B8%E4%B9%85%E5%81%9C%E6%AD%A2%E4%B8%AD%E3%81%A7%E3%81%99%E3%80%82%E8%A9%B3%E7%B4%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AF%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84",_EUCS.SIGN_ECLOSE_EX="%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E5%87%A6%E7%90%86%E3%81%8C%E5%A4%A7%E5%A4%89%E6%B7%B7%E9%9B%91%E3%81%97%E3%81%A6%E3%81%8A%E3%82%8A%E3%81%BE%E3%81%99%E3%80%82%3Cbr%3E%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F%E3%81%9F%E3%81%A3%E3%81%A6%E3%81%8B%E3%82%89%E5%86%8D%E5%BA%A6%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%82%92%E3%81%8A%E9%A1%98%E3%81%84%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99",
+    _EUCS.SIGN_EIPADDR="%E3%81%8A%E5%AE%A2%E6%A7%98%E3%81%AE%E7%92%B0%E5%A2%83%E3%81%8B%E3%82%89%E3%81%AF%E3%82%B2%E3%83%BC%E3%83%A0%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AB%E6%8E%A5%E7%B6%9A%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%3Cbr%3E%E8%A9%B3%E7%B4%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AF%E3%81%93%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%82%92%E3%81%8A%E6%9B%B8%E3%81%8D%E6%B7%BB%E3%81%88%E3%81%AE%E4%B8%8A%E3%80%81%3Cbr%3EMHF-%EF%BC%BA%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E7%AA%93%E5%8F%A3%E3%82%88%E3%82%8A%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84",
+    _EUCS.SIGN_EOTHER="%EF%BC%A9%EF%BC%A4%E3%81%AE%E8%AA%8D%E8%A8%BC%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F",
+    _EUCS.SIGN_EAPP="%E3%82%A2%E3%83%97%E3%83%AA%E5%86%85%E3%81%AE%E6%83%B3%E5%AE%9A%E3%81%97%E3%81%A6%E3%81%84%E3%81%AA%E3%81%84%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%A7%E8%AA%8D%E8%A8%BC%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82",
+    _EUCS.SRV_MNT="%3Cspan%20class%3D%22attention%22%3E%E7%8F%BE%E5%9C%A8%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E4%B8%AD%E3%81%AE%E3%81%9F%E3%82%81%E3%80%81%3Cbr%3E%20%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%3C%2Fspan%3E%3Cbr%3E%3Cbr%3E%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E7%B5%82%E4%BA%86%E3%81%BE%E3%81%A7%E4%BB%8A%E3%81%97%E3%81%B0%E3%82%89%E3%81%8F%E3%81%8A%E5%BE%85%E3%81%A1%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0A%0A"
 }
     (); var _EXT_MODE = "launcher", _MODE_BRANCH = !1;
 
@@ -602,12 +601,12 @@ function delCoockie(e) {
     "use strict";
     var e, E, t, r = location.host;
 
-    if (_COG_MODE = -1 !== r.indexOf("zerulight"), _NHN_MODE = -1 !== r.indexOf("hangame-"), t = _COG_MODE ? "cog-" : _NHN_MODE ? "hangame-" : "dmm-", modeCheck(r, "mhf-z.jp")) _MODE_BRANCH = !1, e = "", E = "jp";
+    if (_COG_MODE = -1 !== r.indexOf("cog-"), _NHN_MODE = -1 !== r.indexOf("hangame-"), t = _COG_MODE ? "cog-" : _NHN_MODE ? "hangame-" : "dmm-", modeCheck(r, "mhf-z.jp")) _MODE_BRANCH = !1, e = "", E = "jp";
     else {
         if (!modeCheck(r, "mhf-z.net"))
             return;
         _MODE_BRANCH = !0, e = -1 !== r.indexOf("stage") ? "stage-" : "debug-", E = "net"
-    } (_HOSTS = {}).s = "http://zerulight.cc", _HOSTS.g = "http://zerulight.cc", _HOSTS.i = "http://zerulight.cc", _HOSTS.p = "http://zerulight.cc", _HOSTS.c = "http://zerulight.cc"
+    } (_HOSTS = {}).s = "http://" + e + "members.mh-frontier." + E, _HOSTS.g = "http://" + e + t + "members.mhf-z." + E, _HOSTS.i = "http://" + ("net" === E ? "stage-" : "") + t + "members.mhf-z." + E, _HOSTS.p = "https://pre02v.capcom-onlinegames.jp", _HOSTS.c = "https://www.capcom-onlinegames.jp"
 }();
 var _BNR_INT = 5e3, _BNR_CRR = 0, _BNR_TOI = null;
 
@@ -643,7 +642,7 @@ function switchBnr(e) {
         $("#launcher_bnr .bnr img").removeAttr("onerror")
     } catch (e) { }
     $("#launcher_bnr .bnr img").hide(),
-        $("#launcher_bnr .bnr").append($("<div class=\"frame\" onClick=return false\"DoPlaySound('IDR_WAV_OK');('" + $(E).attr("href") + "');\" onMouseOver=\"DoPlaySound('IDR_WAV_SEL');\"></div>")),
+        $("#launcher_bnr .bnr").append($("<div class=\"frame\" onClick=\"DoPlaySound('IDR_WAV_OK'); openDefBrowser('" + $(E).attr("href") + "');\" onMouseOver=\"DoPlaySound('IDR_WAV_SEL');\"></div>")),
         $("#launcher_bnr .bnr img").fadeIn(), startBnrSwitchTimer()
 }
 
@@ -855,7 +854,6 @@ function showCharSelector() {
         $("#launcher_login_panel").hide(),
         $("#launcher_update_progress").hide(),
         $("#launcher_log_area").hide(), $(_CHR_SEL_BOX).hide(),
-        $("#launcher_logout").show(),
         $(_CHR_SEL_BOX + " .units").html(""), $(_CHR_SEL_BOX + " .scroll").hide();
 
     var e = DoGetCharacterInfo();
@@ -879,13 +877,6 @@ function showCharSelector() {
         var t = e - _CHR_CRR + _CHR_UNIT_I;
         t < 0 ? $(E).css("top", _CHR_UNIT_Y[0] + "px") : _CHR_UNIT_Y.length <= t ? $(E).css("top", _CHR_UNIT_Y[_CHR_UNIT_Y.length - 1] + "px") : ($(E).css("top", _CHR_UNIT_Y[t] + "px"), $(E).css("display", "block"), $(E).css("z-index", convTop2Z(E)), t === _CHR_UNIT_I ? ($(E).addClass("crr"), $($(E).children(".cover")[0]).stop().fadeTo(0, 1), addStamp(E)) : $($(E).children(".cover")[0]).stop().fadeTo(0, Math.min(.75, .45 * Math.abs(t - _CHR_UNIT_I))))
     }), _CHR_CRR !== _CHR_DEF ? scrollCharUni(1, "swing") : (updateScrollBtnState(), updateCharCtrlBtnState(), $(_CHR_SEL_BOX).show())
-}
-
-function showLoginPanel() {
-    "use strict";
-    switchEvtPhase("prepare"), _CHR_DEF = 0, $("#launcher_character_select").hide(),
-        $("#launcher_log_area").show(), $("#launcher_login_panel").show(),
-        $("#launcher_logout").hide();
 }
 
 function charDelPolling() {
@@ -1453,8 +1444,6 @@ function switchAuthMode() {
         $(_CHR_SEL_BOX).hide(),
         $("#launcher_log_area").show(),
         $("#launcher_login_panel").show(),
-        $("#launcher_version p.login_id").text(""),
-        $("#launcher_logout").hide(),
         $(_AT_FOCUS_ELMS[_AT_FOCUS_IDX]).addClass("hover"), forceFocus(_AT_FOCUS_ELMS[_AT_FOCUS_IDX]), _KEY_ACT_DEF = function (e) {
             if (_IS_MODAL) return !1;
             var E = _AT_FOCUS_IDX, t = !0;

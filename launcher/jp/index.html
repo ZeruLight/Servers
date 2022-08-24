@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC"-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-script-type" content="text/javascript">
+<meta name="robots" content="none" />
+<title>Monster Hunter Frontier G Launcher</title>
+<style type="text/css">
+*{margin:0; padding:0;}
+*[unselectable="on"]{cursor:default; user-select: none; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none;}
+a{border:none; outline:none;}
+ul{list-style:none;}
+img{border-style:none;}
+html,body{width:100%; height:100%; overflow:hidden;}
+body{background:#000; font-family:"メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; color:#d1c0a5; font-size:14px; line-height:16px;}
+.glove{position:absolute; left:0; top:0; width:100%; height:100%;}
+#launcher_body{width:1124px; height:600px; overflow:hidden; position:absolute; left:0; top:0; background:no-repeat 0px 0px;}
+#launcher_version{width:525px; height:114px; position:absolute; left:0; top:11px; background:no-repeat 0px 27px;}
+#launcher_version img{margin-left:17px; margin-top:8px; position:relative; cursor:pointer;}
+#launcher_version p{color:#dcdcdc; position:absolute; left:330px; top:75px;}
+#launcher_version p.login_id{color:#e5e5e5; font-size:12px; line-height:14px; left:0; right:5px; top:103px; text-align:right; z-index: 1000;}
+#btn_config{width:281px; height:33px; position:absolute; left:137px; bottom:48px; cursor:pointer; background:no-repeat 0px 0px; z-index:1000;}
+#btn_config:hover{background-position:0px -33px;}
+#launcher_log_area{width:410px; height:86px; padding:6px 8px; position:absolute; left:65px; bottom:90px; background:no-repeat 0px 0px;}
+#launcher_log_area .msg{display:block; width:410px; height:86px; font-size:12px; line-height:14px; color:#dcdcdc; overflow:hidden; overflow-y:auto; position:absolute;}
+#launcher_log_area .msg p{width:400px;}
+#launcher_log_area .msg span.green{color:#86a04c;}
+#launcher_log_area .msg span.red{color:#eb3535;}
+#launcher_log_area .msg span.yellow{color:#f4de22;}
+#launcher_log_area .msg span.blue{color:#34b8fd;}
+#launcher_login_panel{width:300px; height:265px; position:absolute; left:129px; top:140px;}
+#launcher_login_panel .btn_login{position:absolute; left:0; top:167px; width:300px; height:64px; background:no-repeat 0px 0px; cursor:pointer;}
+#launcher_login_panel .btn_login:hover,#launcher_login_panel .btn_login.hover{background-position:0px -64px;}
+#launcher_login_panel .btn_login.disabled:hover{background-position:0px 0px; cursor:default;}
+#launcher_login_panel .check_save_id{width:125px; height:12px; position:absolute; left:89px; top:235px; background:no-repeat 0px 0px; cursor:pointer;}
+#launcher_login_panel .check_save_id:hover,#launcher_login_panel .check_save_id.hover{background-position:0px -12px;}
+#launcher_login_panel .btn_forgot{width:151px; height:13px; position:absolute; left:75px; top:252px; background:no-repeat 0px 0px; cursor:pointer;}
+#launcher_login_panel .btn_forgot:hover,#launcher_login_panel .btn_forgot.hover{background-position:0px -13px;}
+#launcher_login_panel .form_area{width:254px; height:146px; position:absolute; left:19px; top:0; background:no-repeat 0px 0px;}
+#launcher_login_panel .form_area *{color:#fff; font-family:"メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; font-size:12px; outline:none; border:none; background:none;}
+#launcher_login_panel .form_area input#l_uid{position:absolute; left:7px; top:24px; width:244px;}
+#launcher_login_panel .form_area input#l_pw{position:absolute; left:7px; top:74px; width:244px;}
+#launcher_login_panel .form_area #l_srv{position:absolute; left:8px; top:125px; width:244px;}
+#launcher_login_panel .form_area .sel_btn{position:absolute; left:4px; top:119px; width:248px; height:24px; background:no-repeat 228px 7px; cursor:pointer;}
+#launcher_login_panel .form_area .l_srv_box{width:252px; position:absolute; left:2px; top:143px; padding:3px 0 1px;}
+#launcher_login_panel .form_area .l_srv_box .box_top{width:252px; height:4px; background:no-repeat 0px 0px; position:absolute; left:0; top:0;}
+#launcher_login_panel .form_area .l_srv_box .box_mid{width:252px; max-height:216px; overflow:hidden; overflow-y:auto; background:repeat-y 0px 0px; position:relative; margin-bottom:2px;}
+#launcher_login_panel .form_area .l_srv_box .box_btm{width:252px; height:2px; background:no-repeat 0px 0px; position:absolute; left:0; bottom:0;}
+#launcher_login_panel .form_area .l_srv_box .srv{width:236px; height:20px; padding:6px 7px 0; position:relative; background:repeat-x 0px 0px; margin-top:1px; margin-left:1px; cursor:pointer;}
+#launcher_login_panel .form_area .l_srv_box .srv:hover{background-position:0px -26px;}
+#launcher_login_panel .progress{position:absolute; left:-7px; top:-3px; width:307px; height:271px; background:no-repeat 0px 0px;}
+#launcher_login_panel .progress .anim{position:absolute; left:132px; top:77px; width:43px; height:43px; background:no-repeat 0px 0px;}
+#launcher_login_panel .progress .anim.f1{background-position:0px -43px;}
+#launcher_login_panel .progress .anim.f2{background-position:0px -86px;}
+#launcher_login_panel .progress .anim.f3{background-position:0px -129px;}
+#launcher_login_panel .progress .anim.f4{background-position:0px -172px;}
+#launcher_login_panel .progress .anim.f5{background-position:0px -215px;}
+#launcher_login_panel .progress .anim.f6{background-position:0px -258px;}
+#launcher_login_panel .progress .anim.f7{background-position:0px -301px;}
+#launcher_login_panel .progress .anim.f8{background-position:0px -344px;}
+#launcher_login_panel .progress .anim.f9{background-position:0px -387px;}
+#launcher_login_panel .progress .anim.f10{background-position:0px -430px;}
+#launcher_login_panel .progress .anim.f11{background-position:0px -473px;}
+#launcher_login_panel .progress p{color:#fff; text-align:center; width:100%; position:absolute; left:0; top:128px;}
+body#hangame #launcher_login_panel,body#dmm #launcher_login_panel{top:131px;}
+body#hangame #launcher_login_panel .btn_login,body#dmm #launcher_login_panel .btn_login{top:200px;}
+body#hangame #launcher_login_panel .form_area,body#dmm #launcher_login_panel .form_area{height:179px;}
+body#hangame #launcher_login_panel .form_area #l_srv,body#dmm #launcher_login_panel .form_area #l_srv{top:158px;}
+body#hangame #launcher_login_panel .form_area .sel_btn,body#dmm #launcher_login_panel .form_area .sel_btn{top:152px;}
+body#hangame #launcher_login_panel .form_area .l_srv_box,body#dmm #launcher_login_panel .form_area .l_srv_box{top:176px;}
+body#hangame #launcher_login_panel .form_area form,
+body#hangame #launcher_login_panel .check_save_id,
+body#hangame #launcher_login_panel .btn_forgot,
+body#dmm #launcher_login_panel .form_area form,
+body#dmm #launcher_login_panel .check_save_id,
+body#dmm #launcher_login_panel .btn_forgot{display:none;}
+#launcher_auth_maintenance{width:426px; height:169px; position:absolute; left:63px; top:171px; background:no-repeat 0px 0px; display:none;}
+#launcher_update_progress{position:absolute; left:115px; top:168px; width:320px; height:179px;}
+#launcher_update_progress .bar_area{position:absolute; left:0; bottom:0; width:320px; height:33px; background:no-repeat 0px 0px;}
+#launcher_update_progress .bar_area .file_progress{position:absolute; left:9px; top:5px; width:0px; max-width:302px; height:2px; background:repeat-y 0px 0px;}
+#launcher_update_progress .bar_area .total_progress{position:absolute; left:9px; top:22px; width:0px; max-width:302px; height:6px; background:repeat-y 0px 0px;}
+#launcher_update_progress .anim{position:absolute; left:120px; top:16px; width:85px; height:91px; background:no-repeat 0px 0px;}
+#launcher_update_progress .anim.f1{background-position:0px -91px;}
+#launcher_update_progress .anim.f2{background-position:0px -182px;}
+#launcher_update_progress .anim.f3{background-position:0px -273px;}
+#launcher_update_progress .anim.f4{background-position:0px -364px;}
+#launcher_update_progress .anim.f5{background-position:0px -455px;}
+#launcher_update_progress .anim.f6{background-position:0px -546px;}
+#launcher_update_progress .anim.f7{background-position:0px -637px;}
+#launcher_update_progress .msg{position:absolute; left:99px; top:0; width:142px; height:21px; background:no-repeat 0px 0px;}
+#launcher_character_select{width:520px; height:378px; position:absolute; left:15px; top:134px; color:#313131; display:none;}
+#launcher_character_select .units{width:520px; height:263px; position:absolute; left:0; top:0;}
+#launcher_character_select .units .unit{width:520px; height:143px; position:absolute; left:0; top:60px; background:url(images/char/unit_bg.png) no-repeat 0px 0px; cursor:default;}
+#launcher_character_select .units .unit.onehandsword{background-image:url(images/char/unit_bg_onehandsword.png);}
+#launcher_character_select .units .unit.twinsword{background-image:url(images/char/unit_bg_twinsword.png);}
+#launcher_character_select .units .unit.largesword{background-image:url(images/char/unit_bg_largesword.png);}
+#launcher_character_select .units .unit.longsword{background-image:url(images/char/unit_bg_longsword.png);}
+#launcher_character_select .units .unit.horn{background-image:url(images/char/unit_bg_horn.png);}
+#launcher_character_select .units .unit.hammer{background-image:url(images/char/unit_bg_hammer.png);}
+#launcher_character_select .units .unit.lance{background-image:url(images/char/unit_bg_lance.png);}
+#launcher_character_select .units .unit.gunlance{background-image:url(images/char/unit_bg_gunlance.png);}
+#launcher_character_select .units .unit.senryukon{background-image:url(images/char/unit_bg_senryukon.png);}
+#launcher_character_select .units .unit.slashaxe{background-image:url(images/char/unit_bg_slashaxe.png);}
+#launcher_character_select .units .unit.magnetspike{background-image:url(images/char/unit_bg_magnetspike.png);}
+#launcher_character_select .units .unit.lbowgun{background-image:url(images/char/unit_bg_lbowgun.png);}
+#launcher_character_select .units .unit.hbowgun{background-image:url(images/char/unit_bg_hbowgun.png);}
+#launcher_character_select .units .unit.bow{background-image:url(images/char/unit_bg_bow.png);}
+#launcher_character_select .units .unit .num{width:81px; height:77px; position:absolute; left:11px; top:11px; background:no-repeat 0px 0px;}
+#launcher_character_select .units .unit .icon{width:48px; height:47px; position:absolute; left:31px; top:69px; background:no-repeat 0px 0px;}
+#launcher_character_select .units .unit p.name{font-size:30px; line-height:30px; letter-spacing:0.25; text-align:center; font-weight:bold; position:absolute; top:23px; left:0; width:100%;}
+#launcher_character_select .units .unit p.wp{font-size:18px; line-height:20px; text-align:center; font-weight:bold; display:block; position:absolute; left:90px; top:73px; white-space:nowrap;}
+#launcher_character_select .units .unit.slashaxe p.wp{left:84px; letter-spacing:-2px;}
+#launcher_character_select .units .unit.magnetspike p.wp{left:90px; letter-spacing:-1px;}
+#launcher_character_select .units .unit p.wp:first-line{font-size:14px;letter-spacing:0;}
+#launcher_character_select .units .unit p.data{text-align:left; font-size:16px; line-height:18px; display:block; white-space:nowrap; position:absolute; left:252px; top:65px;}
+#launcher_character_select .units .unit .cover{width:504px; height:127px; position:absolute; left:8px; top:8px; background:#000;}
+#launcher_character_select .units .unit.crr{cursor:pointer;}
+#launcher_character_select .units .unit.crr .sign{width:134px; height:124px; position:absolute; right:9px; top:9px; background:no-repeat 0px 0px;}
+#launcher_character_select .units .unit.crr .sign.down{background-position:0px -124px;}
+#launcher_character_select .units .unit.crr .cover{width:520px; height:143px; left:0; top:0; background:none;}
+#launcher_character_select .units .unit.new p.name{font-weight:normal;}
+#launcher_character_select .units .unit p.new,
+#launcher_character_select .units .unit.new .icon,
+#launcher_character_select .units .unit.new p.wp,
+#launcher_character_select .units .unit.new p.data{display:none;}
+#launcher_character_select .units .unit.new p.new{display:block; width:100%; position:absolute; left:0; top:66px; color:#313131; font-size:14px; font-weight:bold; text-align:center; line-height:18px;}
+#launcher_character_select .units .unit.new p.new:first-line{font-size:26px; line-height:32px; color:#3169f0;}
+#launcher_character_select .scroll{width:131px; height:39px; position:absolute; left:198px;background:no-repeat 0px 0px; cursor:pointer; z-index:1000;}
+#launcher_character_select .scroll.disabled{cursor:default;}
+#launcher_character_select .scroll.up{top:14px;}
+#launcher_character_select .scroll.down{top:210px;}
+#launcher_character_select .scroll:hover{background-position:0px -39px;}
+#launcher_character_select .scroll.disabled:hover{background-position:0px 0px;}
+#launcher_character_select .btn_add{width:220px; height:38px; position:absolute; left:89px; top:269px; background:no-repeat 0px 0px; cursor:pointer; z-index:1000;}
+#launcher_character_select .btn_del{width:120px; height:38px; position:absolute; left:321px; top:269px; background:no-repeat 0px 0px; cursor:pointer; z-index:1000;}
+#launcher_character_select .btn_add:hover,
+#launcher_character_select .btn_del:hover{background-position:0px -38px;}
+#launcher_character_select .btn_add.disabled,
+#launcher_character_select .btn_del.disabled{cursor:default; background-position:0px 0px;}
+#launcher_character_select .btn_start{width:300px; height:64px; position:absolute; left:114px; top:314px; background:no-repeat 0px 0px; cursor:pointer; z-index:1000;}
+#launcher_character_select .btn_start:hover{background-position:0px -64px;}
+#launcher_bnr{width:533px; height:129px; position:absolute; right:38px; top:30px;}
+#launcher_bnr .bnr{width:523px; height:129px; position:absolute; left:0; top:0; background:no-repeat 0px 0px; overflow:hidden;}
+#launcher_bnr .bnr img{margin-left:1px;}
+#launcher_bnr .bnr .frame{width:523px; height:129px; position:absolute; left:0; top:0; background:no-repeat 0px 0px; cursor:pointer;}
+#launcher_bnr .dots{width:10px; position:absolute; right:0; top:0; max-height:129px;}
+#launcher_bnr .dots ul{position:relative; width:10px; padding-top:6px;}
+#launcher_bnr .dots li{display:block; width:10px; height:10px; padding:6px 0; position:relative;}
+#launcher_bnr .dots li .dot{width:10px; height:10px; background:no-repeat 0px 0px; cursor:pointer;}
+#launcher_bnr .dots li .dot.crr,
+#launcher_bnr .dots li .dot:hover{background-position:0px -10px;}
+#launcher_bnr .dots li .dot img{display:none;}
+#launcher_info_list{width:535px; height:288px; position:absolute; right:38px; top:163px; overflow:hidden; overflow-y:auto;}
+#launcher_info_list .important_info, #launcher_info_list .normal_info{margin-bottom:5px;}
+#launcher_info_list .head{width:513px; height:23px; position:relative;}
+#launcher_info_list .head .lbl{position:absolute; left:0; top:0; width:513px; height:23px; background:no-repeat 0px 0px;}
+#launcher_info_list .head a{position:absolute; right:10px; top:6px; display:block; width:35px; height:13px; background:no-repeat 0px 0px;}
+#launcher_info_list .head a:hover{background-position:0px -13px;}
+#launcher_info_list ul.article{margin-left:18px; width:517px; position:relative;}
+#launcher_info_list ul.article li{width:517px; position:relative; overflow:hidden; padding:5px 0;}
+#launcher_info_list ul.article li div{position:relative; float:left;}
+#launcher_info_list ul.article li .date{width:110px;}
+#launcher_info_list ul.article li .body{width:340px;}
+#launcher_info_list ul.article li .body a{color:#d1c0a5; text-decoration:none;}
+#launcher_info_list ul.article li .body a:hover{color:#EFDDC2;}
+#launcher_info_list .important_info ul.article li .body a, #launcher_info_list .important_info ul.article li .date{color:#f4c833;}
+#launcher_info_list .important_info ul.article li .body a:hover{color:#F8DD81;}
+#launcher_info_list ul.article li .icon{width:30px; height:14px; background:no-repeat center center;}
+#launcher_info_list a{cursor:pointer;}
+#launcher_info_detail{width:532px; height:423px; position:absolute; right:38px; top:30px; background:no-repeat 0px 0px;}
+#launcher_info_detail .article_frame{width:532px; height:423px; position:absolute; left:0; top:0; overflow:hidden; overflow-y:auto;}
+#launcher_info_detail .article_frame .article{width:515px; min-height:394px; position:relative; margin:10px 0 10px; padding-top:9px; background-color:#fef5e6; font-family:"ＭＳ Ｐゴシック", "MS PGothic", sans-serif; font-size:14px; line-height:18px; color:#333333;}
+#launcher_info_detail .article_frame .article .article_category{width:515px; height:24px; background:no-repeat 0px 0px; margin-bottom:9px; background-color: #313131;}
+#launcher_info_detail .article_frame .article .newstitle_area{width:515px; background-color:#e8d9b9; padding:4px 0 2px; margin:0 auto 10px;}
+#launcher_info_detail .article_frame .article .newstitle_area table td{}
+#launcher_info_detail .article_frame .article .newstitle_area table td:first-child{width:10px;}
+#launcher_info_detail .article_frame .article .newstitle_area table td:first-child + *{width: 415px;}
+#launcher_info_detail .article_frame .article .newstitle_area table td:nth-child(2){width: 415px;}
+#launcher_info_detail .article_frame .article .newstext_area{width:515px; margin:0 auto;}
+#launcher_info_detail .article_frame .article .newstext_area .category,
+#launcher_info_detail .article_frame .article .newstext_area .article_title{display:none;}
+#launcher_info_detail .article_frame .article .newstext_area .article_body p{padding: 0 10px;}
+#launcher_info_detail .article_frame .article .newstext_area .article_body table{max-width:505px; margin:0 auto;}
+#launcher_info_detail .btn_back{cursor:pointer; width:160px; height:18px; position:absolute; left:184px; bottom:6px; background:no-repeat 0px 0px;}
+#launcher_info_detail .btn_back:hover{background-position:0px -18px;}
+#launcher_info_detail a{cursor:pointer;}
+#launcher_menu{height:86px; position:absolute; right:14px; top:467px; overflow:hidden;}
+#launcher_menu .btn{width:82px; height:86px; background:no-repeat 0px 0px; float:right; margin:0 8px; cursor:pointer;}
+#launcher_menu .btn:hover{background-position:0px -86px;}
+#launcher_menu .btn.hangameb,#launcher_menu .btn.hancoin,#launcher_menu .btn.dmmb,#launcher_menu .btn.dmmpt,#launcher_menu .btn.dmmmypage{display:none;}
+
+body#hangame #launcher_menu .btn.hangameb,body#hangame #launcher_menu .btn.hancoin{display:block;}
+body#hangame #launcher_menu .btn.cogb,body#hangame #launcher_menu .btn.caplink,body#hangame #launcher_menu .btn.cap,
+body#dmm #launcher_menu .btn.cogb,body#dmm #launcher_menu .btn.caplink,body#dmm #launcher_menu .btn.cap,body#dmm #launcher_menu .btn.mypage{display:none;}
+body#dmm #launcher_menu .btn.dmmb, body#dmm #launcher_menu .btn.dmmpt,body#dmm #launcher_menu .btn.dmmmypage{display:block;}
+#launcher_footer{width:100%; height:39px; position:absolute; left:0; bottom:0; overflow:hidden;}
+#launcher_footer .btn{display:block; position:absolute; z-index:1000; cursor:pointer;}
+#launcher_footer .btn.capcom{width:101px; height:26px; background:no-repeat 0px 0px; left:31px; top:6px;}
+#launcher_footer .btn.cog{width:76px; height:21px; background:no-repeat 0px 0px; left:142px; top:9px;}
+#launcher_footer .btn.hangame,#launcher_footer .btn.dmm{display:none;}
+#launcher_footer p{color:#a0a0a0; font-size:12px; line-height:12px; position:absolute; left:235px; top:14px;}
+body#hangame #launcher_footer .btn.cog,body#hangame #launcher_footer .btn.dmm{display:none;}
+body#hangame #launcher_footer .btn.hangame{width:70px; height:26px; background:no-repeat 0px 0px; left:142px; top:10px; display:block;}
+body#hangame #launcher_footer p{left:226px;}
+body#dmm #launcher_footer .btn.cog,body#dmm #launcher_footer .btn.hangame{display:none;}
+body#dmm #launcher_footer .btn.dmm{width:107px; height:22px; background:no-repeat 0px 0px; left:142px; top:10px; display:block;}
+body#dmm #launcher_footer p{left:262px;}
+#launcher_footer .share{position:absolute; right:36px; top:6px; overflow:hidden; width:136px; height:27px;}
+#launcher_footer .share .btn{display:block; background:no-repeat; margin-left:10px; position:relative; float:left; cursor:pointer;}
+#launcher_footer .share .btn.tw{width:28px; height:27px; background-position:0px 0px;}
+#launcher_footer .share .btn.fb{width:28px; height:27px; background-position:-28px 0px;}
+#launcher_footer .share .btn.yt{width:50px; height:21px; margin-top:3px; background-position:-56px -3px;}
+#launcher_header{width:106px; height:20px; position:absolute; right:10px; top:0; z-index:1000;}
+#launcher_header div{width:50px; height:20px; position:absolute; top:0; background:no-repeat 0px 0px; cursor:pointer;}
+#launcher_header div:hover{background-position:0px -20px;}
+#launcher_header .min{left:0;}
+#launcher_header .close{right:0;}
+#launcher_modal{width:100%; height:100%; position:fixed; left:0; top:0; display:none; z-index:1000;}
+#launcher_modal .modal{width:100%; height:100%; position:absolute; left:0; top:0;}
+#launcher_modal .dialog{position:absolute; left:282px; top:140px; width:560px; height:320px; background:url(images/dialog/bg.jpg) no-repeat 0px 0px;}
+#launcher_modal .dialog p{color:#d1c0a5; font-size:18px; line-height:36px; width:100%; position:relative; text-align:center; padding-top:105px;}
+#launcher_modal .dialog p.alert{line-height:26px; padding-top:90px; font-size:20px;}
+#launcher_modal .dialog p span.uid{font-size:12px;}
+#launcher_modal .dialog p span.attention{color:#f4de22;}
+#launcher_modal .dialog p span.notes{color:#eb3535; font-size:16px; line-height:20px;}
+#launcher_modal .dialog p div.sp{width:100%; height:10px;}
+#launcher_modal .dialog .btnBox{width:100%; height:44px; position:absolute; left:0; top:252px;}
+#launcher_modal .dialog .btns{text-align:center; margin:0 auto; position:relative; overflow:hidden; padding-top:3px;}
+#launcher_modal .dialog .btns ul{position:relative; left:50%; float:left; list-style:none}
+#launcher_modal .dialog .btns ul li{position:relative; left:-50%; float:left; margin-left:33px;}
+#launcher_modal .dialog .btns ul li:first-child{margin-left:5px;}
+#launcher_modal .dialog .btns ul li div{display:block; width:200px; height:35px; padding-top:9px; position:relative; background:no-repeat 0px 0px; text-decoration:none; color:#d1c0a5; font-weight:bold; font-size:18px; line-height:18px; text-align:center; cursor:pointer;}
+#launcher_modal .dialog .btns ul li div:hover,#launcher_modal .dialog .btns ul li div.hover{background-position:0px -44px;}
+#launcher_modal .dialog .btns ul li div.wait:hover,#launcher_modal .dialog .btns ul li div.wait.hover{background-position:0px 0px; cursor:default;}
+#launcher_modal .dialog .btns ul li div.sign{width:18px; height:16px; margin:0; padding:0; position:absolute; left:-3px; top:-3px; background:no-repeat 0px 0px;}
+#launcher_game_start_wait{position:absolute; left:0; top:0; width:100%; height:100%; background:center center; display:none; z-index:2000;}
+.scroll_bar_box{width:10px; position:absolute;}
+.scroll_bar_box_base{width:10px; height:100%; position:absolute; right:0; top:0; border-radius:5px; background:#000; opacity:0.4; -moz-opacity:0.4; filter: alpha(opacity=40); -ms-filter:"alpha(opacity=40)";}
+.scroll_bar_box_body{width:6px; position:absolute; right:2px; border-radius:3px; background:#535353; transition:background-color 0.2s linear 0; cursor:pointer; opacity:0.8; -moz-opacity:0.8; filter: alpha(opacity=80); -ms-filter:"alpha(opacity=80)";}
+.scroll_bar_box_body:hover, .scroll_bar_box_body.active{background:#FFF; transition:background-color 0.4s linear 0;}
+.xboxOnly,.ps3Only,.psvOnly,.wiiuOnly{display:none !important;}
+body#cog .cogHide,body#cog .nhnOnly,body#cog .dmmOnly{display:none !important;}
+body#hangame .nhnHide,body#hangame .cogOnly,body#hangame .dmmOnly{display:none !important;}
+body#dmm .dmmHide,body#dmm .cogOnly,body#dmm .nhnOnly{display:none !important;}
+.spOnly,.iosOnly,.droidOnly{display:none !important;}
+.consoleOnly,.nfXboxOnly,.nfPs3Only,.nfPsVOnly{display:none !important;}
+.nintendoOnly,.playstation3Only,.playstation4Only,.playstationVitaOnly{display:none !important;}
+</style>
+<link rel="stylesheet" href="css/img.css?v=191016">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>var _lver = 'z15887';</script>
+  <script type="text/javascript" src="js/launcher.js?v=191016"></script>
+<script>
+(function(){
+    
+    var _bg = ['000', '005'];
+    var _id = _bg[Math.floor(Math.random()*_bg.length)];
+    var _ls = location.search.split('?').pop().split('&');
+    for (var i=0;i<_ls.length;i++) {
+        var _tmp = _ls[i].split('=');
+        if (_tmp[0] === 'bg') {
+            _id = _tmp[1];
+        }
+    }
+    
+    _id = 'z000';
+    var _css = '';
+    _css += '<style type="text/css">';
+    _css += '#launcher_body{background-image:url(images/bg/'+_id+'.jpg);}'; //背景画像指定
+    _css += '#launcher_bnr .bnr .frame{background-image:url(images/bg/'+_id+'_bnr.png);}'; //バナー窓指定
+    _css += '</style>';
+    document.write(_css);
+})();
+</script>
+
+</head>
+<body>
+<div id="launcher_body"><div class="glove"></div>
+<!--logo & version-->
+<div id="launcher_version"><p class="ver"></p><p class="login_id"><script>if (_MODE_BRANCH) {document.write(String(location.host).split('-').shift() + ' rev. '+_lver);}</script></p><div class="glove"></div>
+<img src="images/logo/000_z.png" width="303" height="114" alt="MHF-Ｇ" onClick="openMemberSite();"/>
+</div>
+<!--設定ボタン-->
+<div id="btn_config" class="unselectable"></div>
+<!--ログ-->
+<div id="launcher_log_area" class="unselectable"><div class="msg"><p></p></div></div>
+<!--ログインパネル-->
+<div id="launcher_login_panel" class="">
+<div class="btn_login selsnd unselectable"></div>
+<div class="check_save_id selsnd unselectable"></div>
+<div class="btn_forgot selsnd unselectable" onClick="openDefBrowser('http://www.capcom-onlinegames.jp/pc/forgot');"></div>
+<div class="form_area">
+<form action="javascript:void(0);">
+<input type="text" border="0" align="left" name="l_uid" id="l_uid" default="IDまたはメールアドレス" value="IDまたはメールアドレス" accesskey="i">
+<input type="password" border="0" align="left" name="l_pw" id="l_pw" default="" value="" accesskey="p">
+</form>
+<div id="l_srv" class="unselectable unselectable"></div><div class="sel_btn unselectable"></div><div class="l_srv_box unselectable"></div>
+</div>
+<div class="progress unselectable" onClick="return false;" style="display:none;"><div class="anim"></div><p class="unselectable">認証中</p></div>
+</div>
+<!--メンテor認証不可状態時表示枠-->
+<div id="launcher_auth_maintenance" class="unselectable"></div>
+<!--アップデート-->
+<div id="launcher_update_progress" class="unselectable" style="display:none;"><div class="bar_area"><div class="file_progress"></div><div class="total_progress"></div></div><div class="anim f0"></div><div class="msg"></div></div>
+<!--キャラクター選択-->
+<div id="launcher_character_select" class="unselectable"><div class="glove"></div>
+<div class="units"></div>
+<div class="scroll up selsnd"></div><div class="scroll down selsnd"></div>
+<div class="btn_add"></div><div class="btn_del"></div><div class="btn_start selsnd"></div>
+</div>
+<!--バナー-->
+<div id="launcher_bnr" class="unselectable" style="display:none;"><div class="bnr"></div><div class="dots"><ul></ul></div></div>
+<!--お知らせ-->
+<div id="launcher_info_list" class="unselectable" style="display:none;"></div>
+<div id="launcher_info_detail" style="display:none;" class=""><div class="article_frame"><div class="article"></div></div><div class="btn_back selsnd" onClick="hideInfoDetail();"></div></div>
+<!--メニュー-->
+<div id="launcher_menu" class="unselectable">
+<div class="dmmb btn" onClick="openDefBrowser('http://www.dmm.com/lp/game/mhfg/index001_html/=/navi=none/');"></div>
+<div class="dmmpt btn" onClick="openDefBrowser('http://www.dmm.com/netgame/-/basket/');"></div>
+<div class="hangameb btn" onClick="openDefBrowser('http://mhf-z.hange.jp/');"></div>
+<div class="hancoin btn" onClick="openDefBrowser('http://www.hange.jp/');"></div>
+<div class="cogb btn" onClick="openDefBrowser('http://cog.mhf-z.jp/');"></div>
+<div class="cogOnly mypage btn" onClick="openDefBrowser('http://cog-members.mhf-z.jp/launcher/mypage.html');"></div>
+<div class="nhnOnly mypage btn" onClick="openDefBrowser('http://hangame-members.mhf-z.jp/launcher/mypage.html');"></div>
+<div class="dmmmypage btn" onClick="openDefBrowser('https://members.mh-frontier.jp/auth/dmm_regist/mypage_dmm.php');"></div>
+<div class="inquiry btn" onClick="openInquiry();"></div>
+<div class="manual btn" onClick="openManual();"></div>
+</div>
+<!--フッター-->
+<div id="launcher_footer" class="unselectable"><div class="glove"></div>
+<div class="capcom btn" onClick="openDefBrowser('http://www.capcom.co.jp/');"></div>
+<div class="cog btn" onClick="openDefBrowser('http://www.capcom-onlinegames.jp/');"></div>
+<div class="hangame btn" onClick="openDefBrowser('http://www.hange.jp/');"></div>
+<div class="dmm btn" onClick="openDefBrowser('http://www.dmm.com/netgame/');"></div>
+<p>&copy;CAPCOM CO., LTD. ALL RIGHTS RESERVED.</p>
+<div class="share">
+<div class="tw btn" onClick="openDefBrowser('https://twitter.com/MHF_official');"></div>
+<div class="fb btn" onClick="openDefBrowser('https://www.facebook.com/mhf.capcom');"></div>
+<div class="yt btn" onClick="openDefBrowser('http://www.youtube.com/user/MHFofficial');"></div>
+</div>
+</div>
+<!--ダイアログ-->
+<div id="launcher_modal"><div class="modal" onClick="return false;"></div><div class="dialog"><p></p><div class="btnBox"><div class="btns"></div></div></div></div>
+<!--最小化＆終了ボタン-->
+<div id="launcher_header" class="unselectable"><div class="glove"></div><div class="min selsnd" onClick="addEvent('min_click'); DoMinimizeWindow();"></div><div class="close selsnd" onClick="addEvent('close_click'); DoCloseWindow();"></div></div>
+
+<div id="launcher_game_start_wait"></div>
+</div>
+<script type="text/javascript">(function(){if (location.host != '') {document.getElementsByTagName('body')[0].id = ((location.host.indexOf('dmm') != -1)?'dmm':((location.host.indexOf('hangame') != -1)?'hangame':'cog'));}})();</script>
+
+<div id="preload" style="width:1px; height:1px; overflow:hidden; position:fixed; left:-100px; top:-100px;">
+<img src="./images/dialog/bg.jpg" alt="ダイアログ用背景">
+<img src="./images/char/unit_bg.png" alt="キャラ作成用背景">
+<img src="./images/char/unit_bg_bow.png" alt="弓用背景">
+<img src="./images/char/unit_bg_hbowgun.png" alt="ヘビィボウガン用背景">
+<img src="./images/char/unit_bg_lbowgun.png" alt="ライトボウガン用背景">
+<img src="./images/char/unit_bg_slashaxe.png" alt="スラッシュアックスＦ用背景">
+<img src="./images/char/unit_bg_senryukon.png" alt="穿龍棍用背景">
+<img src="./images/char/unit_bg_gunlance.png" alt="ガンランス用背景">
+<img src="./images/char/unit_bg_lance.png" alt="ランス用背景">
+<img src="./images/char/unit_bg_horn.png" alt="狩猟笛用背景">
+<img src="./images/char/unit_bg_hammer.png" alt="ハンマー用背景">
+<img src="./images/char/unit_bg_longsword.png" alt="太刀用背景">
+<img src="./images/char/unit_bg_largesword.png" alt="大剣用背景">
+<img src="./images/char/unit_bg_twinsword.png" alt="双剣用背景">
+<img src="./images/char/unit_bg_onehandsword.png" alt="片手剣用背景">
+<img src="./images/char/unit_bg_magnetspike.png" alt="マグネットスパイク用">
+</div>
+
+</body>
+</html>
