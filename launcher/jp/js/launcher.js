@@ -314,7 +314,7 @@ function DoStartUpdate() {
     "use strict";
     extPreTry();
     try {
-        return window.external.startUpdate()
+        return false
     } catch (e) {
         return extCatchReturn(!0)
     }
