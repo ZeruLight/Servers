@@ -782,7 +782,7 @@ function createCharUnit(e, E, t, r, a, _, s, n) {
     var o = $('<div class="unit" uid="' + t + '" name="' + E + '" hr="' + r + '" to="0"></div>');
     if (o.append($('<div class="num n' + e + '"></div>')), o.append($('<div class="sign"></div>')), o.append($('<p class="name">' + entityRef(E) + "</p>")), 0 === r) o.addClass("new"), o.append($('<p class="new">' + duc("anch") + "</p>"));
     else {
-        var i = convWpType(_); o.addClass(i), o.append($('<div class="icon' + ("" !== i ? " " + i : "") + '"></div>')), o.append($('<p class="wp">' + duc("cwpt") + "<br>" + _ + "</p>")), o.append($('<p class="data">HR' + r + (0 < a ? "　GR" + a : "") + "　" + ("M" === s ? "♂" : "♀") + "<br>ID:" + t + "<br>" + duc("pcst") + ":" + convLastDateStr(n) + "</p>"))
+        var i = convWpType(_); o.addClass(i), o.append($('<div class="icon' + ("" !== i ? " " + i : "") + '"></div>')), o.append($('<p class="wp">' + duc("cwpt") + "<br>" + translateWeapon(_) + "</p>")), o.append($('<p class="data">HR' + r + (0 < a ? "　GR" + a : "") + "　" + ("M" === s ? "♂" : "♀") + "<br>ID:" + t + "<br>" + duc("pcst") + ":" + convLastDateStr(n) + "</p>"))
     }
     return o.append($('<div class="cover"></div>')), o.click(function () {
         $(this).hasClass("crr") && gameStart()
@@ -847,6 +847,41 @@ function kdCharSelMode() {
     }
 }
 
+function translateWeapon(e) {
+    switch (e) {
+        case '片手剣':
+            return 'Sword & Shield';
+        case '双剣':
+            return 'Dual Swords';
+        case '大剣':
+            return 'Greatsword';
+        case '太刀':
+            return 'Longsword';
+        case 'ハンマー':
+            return 'Hammer';
+        case '狩猟笛':
+            return 'Hunting Horn';
+        case 'ランス':
+            return 'Lance';
+        case 'ガンランス':
+            return 'Gunlance';
+        case '穿龍棍':
+            return 'Tonfa';
+        case 'スラッシュアックスＦ':
+            return 'Switch Axe F';
+        case 'マグネットスパイク':
+            return 'Magnet Spike';
+        case 'ヘビィボウガン':
+            return 'Heavy Bowgun';
+        case 'ライトボウガン':
+            return 'Light Bowgun';
+        case '弓':
+            return 'Bow';
+        default:
+            return 'Unknown';
+    }
+}
+
 function showCharSelector() {
     "use strict";
     switchEvtPhase("standby"), _CHR_DEF = _CHR_CRR = 0, _CHR_IS_WAIT = !1,
@@ -862,14 +897,16 @@ function showCharSelector() {
     var t = $(e.find("CharacterInfo")[0]).attr("defaultUid");
     e.find("Character").each(function (e, E) {
         $(E).attr("uid") === t && (_CHR_DEF = e),
-            $(_CHR_SEL_BOX + " .units").append(createCharUnit(e + 1,
+            $(_CHR_SEL_BOX + " .units").append(createCharUnit(
+                e + 1,
                 $(E).attr("name"),
-                $(E).attr("uid"), parseInt(
-                    $(E).attr("HR"), 10), parseInt(
-                        $(E).attr("GR"), 10),
+                $(E).attr("uid"),
+                parseInt($(E).attr("HR"), 10),
+                parseInt($(E).attr("GR"), 10),
                 $(E).attr("weapon"),
-                $(E).attr("sex"), parseInt(
-                    $(E).attr("lastLogin"), 10)))
+                $(E).attr("sex"),
+                parseInt($(E).attr("lastLogin"), 10)
+            ))
     }), $(_CHR_SEL_UNIT).each(function (e, E) {
         $(E).removeClass("crr"),
             $(E).css("display", "none"),
