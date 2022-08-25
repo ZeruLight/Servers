@@ -1544,7 +1544,7 @@ function initAuth() {
                 case 222:
                 case 226: DoPlaySound("IDR_WAV_SEL")
             }
-        }), "" !== e && "" === E && forceFocus(_AT_SEL_PW), $(_AT_SEL_ICHK).click(function () { $(_AT_SEL_ICHK).toggleClass("checked"), DoPlaySound("IDR_WAV_OK"), $(_AT_SEL_ICHK).hasClass("checked") ? addEvent("save_id") : (addEvent("delete_id"), delCoockie("cogid" + _EXE_MUTEX)) }), $(_AT_SEL_ICHK).hover(function () { setAuthHover(_AT_SEL_ICHK) }, function () { removeAuthHover() }), $(_AT_SEL_PFGT).hover(function () { setAuthHover(_AT_SEL_PFGT) }, function () { removeAuthHover() }), _STORAGE["cogid" + _EXE_MUTEX] && !_AT_IS_AUTOLC && $(_AT_SEL_ICHK).addClass("checked"), _AT_IS_AUTOLC && "" !== e && "" !== E) "_MHF_AUTOLC" === _AT_MODE && addEvent("login_autolc"), beginAuthProcess();
+        }), "" !== e && "" === E && forceFocus(_AT_SEL_PW), $(_AT_SEL_ICHK).click(function () { $(_AT_SEL_ICHK).toggleClass("checked"), DoPlaySound("IDR_WAV_OK"), $(_AT_SEL_ICHK).hasClass("checked") ? addEvent("save_id") : (addEvent("delete_id"), delCoockie("cogid" + _EXE_MUTEX)) }), $(_AT_SEL_ICHK).hover(function () { setAuthHover(_AT_SEL_ICHK) }, function () { removeAuthHover() }), $(_AT_SEL_PFGT).hover(function () { setAuthHover(_AT_SEL_PFGT) }, function () { removeAuthHover() }), _STORAGE["cogid" + _EXE_MUTEX] && !_AT_IS_AUTOLC && $(_AT_SEL_ICHK).addClass("checked"), _AT_IS_AUTOLC && "" !== e && "" !== E) "_MHF_AUTOLC" === _AT_MODE && addEvent("login_autolc"), $(_AT_SEL_ICHK).toggleClass("checked"), beginAuthProcess();
         else if ("" !== e && "" !== E)
             for (var t = 0; t < _AT_FOCUS_ELMS.length; t++)
                 if (_AT_FOCUS_ELMS[t] === _AT_SEL_LBTN) {
