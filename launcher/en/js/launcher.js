@@ -1,20 +1,17 @@
-var ___ga_uaid = "UA-82931804-1";
+var ___ga_uaid = "";
 
 function trackPageView(e, E) {
-    "use strict";
-    e = String(e), E = String(E);
-    try { ga("send", "pageview", { page: e, title: E }) }
-    catch (e) { }
+    console.log('trackPageView:\ne='+e+'\nE='+E);
+    return
 }
 
 function trackEvent(e, E, t, r) {
-    "use strict";
-    e = String(e),
-        E = String(E),
-        t = String(t),
-        r = isNaN(r) ? null : r;
-    try { ga("send", "event", e, E, t, r) }
-    catch (e) { }
+    var m = "<br>EVENT > e="+e+":E="+E+":t="+t+":r="+r;
+    console.log(m);
+    try {
+        debugLogMsg(m, !1);
+    } catch (e) { }
+    return
 }
 
 function CustomScroll(e) {
@@ -80,70 +77,71 @@ function duc(e) {
     return decodeURIComponent(_EUCS[e])
 } !function () {
     "use strict";
-    _EUCS.xhrspr = "%3C!--%23%23%23content%23%23%23--%3E",
-        _EUCS.dmsrvs = "%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3E%3Cserver_groups%3E%3Cgroup%20nam%3D%22Server%E2%91%A0%22%20cog%3D%22pre%22%20%2F%3E%3C%2Fserver_groups%3E",
-        _EUCS.anch = "You%20can%20create%20a%20new%20character.%20%3Cbr%3E%20Press%20'Start%20Game'%20to%20create%20your%20character.",
-        _EUCS.cwpt = "Current%20Weapon",
-        _EUCS.pcst = "Last%20Login",
-        _EUCS.afac = "Unauthorised%20access.",
-        _EUCS.afde = "Character%20encoding%20not%20supported.",
-        _EUCS.afnsrv = "Select%20a%20server.",
-        _EUCS.afipe = "Username%20or%20password%20is%20different.",
-        _EUCS.af102 = "The%20server%20is%20busy%20at%20the%20moment.%3Cbr%3EPlease%20try%20again%20later.",
-        _EUCS.af301 = "Customer%20authorisation%20is%20currently%20suspended.",
-        _EUCS.af304 = "Password%20has%20been%20incorrectly%20entered%20consecutively.%3Cbr%3EAuthentication%20is%20temporarily%20suspended.%3Cbr%3EPlease%20wait%20an%20hour%20before%20logging%20in.",
-        _EUCS.aferr = "Unknown%20error%20occurred.",
-        _EUCS.af321 = "The%20security%20card%20data%20is%20different.",
-        _EUCS.afipl = "After%20entering%20your%20username%20and%20password%2C%3Cbr%3Eselect%20your%20server%20and%20press%20the%20'Login'%20button.",
-        _EUCS.uflm0 = "It%20is%20currently%20under%20server%20maintenance%20and%20cannot%20be%20activated.%3Cbr%3EPlease%20wait%20for%20a%20while%20until%20the%20service%20starts.",
-        _EUCS.dmb0 = "Register%20now",
-        _EUCS.dmb1 = "Refresh login",
+    _EUCS.xhrspr = "<!--###content###-->",
+        _EUCS.dmsrvs = "<?xml version='1.0' encoding='UTF-8'><server_groups><group nam='Server%E2%91%A0' cog='pre' /></server_groups>",
+        _EUCS.anch = "You can create a new character. <br> Press [Start Game] to create your character.",
+        _EUCS.cwpt = "Current Weapon",
+        _EUCS.pcst = "Last Login",
+        _EUCS.afac = "Unauthorised access.",
+        _EUCS.afde = "Character encoding not supported.",
+        _EUCS.afnsrv = "Select a server.",
+        _EUCS.afipe = "Username or password is different.",
+        _EUCS.af102 = "The server is busy at the moment.<br>Please try again later.",
+        _EUCS.af301 = "Customer authorisation is currently suspended.",
+        _EUCS.af304 = "Password has been incorrectly entered consecutively.<br>Your account has been temporarily suspended.<br>Please wait an hour before logging in.",
+        _EUCS.aferr = "Unknown error occurred.",
+        _EUCS.af321 = "The security card data is different.",
+        _EUCS.afipl = "After entering your username and password,<br>select your server and press the [Log In] button.",
+        _EUCS.uflm0 = "The server is currently under maintenance and cannot be joined.<br>Please try again later.",
+        _EUCS.dmb0 = "Register now",
+        _EUCS.dmb1 = "Refresh Login",
         _EUCS.dmb2 = "Delete",
-        _EUCS.dmb3 = "Don't%20delete",
+        _EUCS.dmb3 = "Don't delete",
         _EUCS.dmb4 = "Close",
         _EUCS.dmb5 = "Yes",
         _EUCS.dmb6 = "No",
-        _EUCS.dmb7 = "Buy%20now",
-        _EUCS.dmb8 = "Not%20now",
-        _EUCS.dmb9 = "Continue%20without%20purchasing.",
-        _EUCS.dmt0 = "Trial%20course%20registration%20is%20required.%3Cbr%3ERegister%20for%20a%20trial%20course%20below.%3Cbr%3E(You%20can%20register%20for%20free).",
-        _EUCS.dmt1 = "Once%20you%20have%20registered%20for%20the%20trial%20course%2C%3Cbr%3Eplease%20wait%20a%20moments%20before%20pressing%3Cbr%3Ethe%20login%20button.",
-        _EUCS.dmca0 = "Purchase%20additional%20character%20rights.%3Cbr%3EPress%20BUY%20NOW%20below.%3Cbr%3E%EF%BC%88Browser%20will%20open%EF%BC%89",
-        _EUCS.dmca1 = "Once%20you%20have%20completed%20the%20purchase%20of%20additional%20character%20rights%2C%3Cbr%3Eplease%20wait%20a%20moment%20and%20then%20press%20the%20login%20button%20below.",
-        _EUCS.dmcd0 = "Are%20you%20sure%20you%20want%20to%20Delete%20the%20character%3Cbr%3E",
-        _EUCS.dmcd1 = "%3Cspan%20class%3D%22uid%22%3E%20(ID%3A",
-        _EUCS.dmcd2 = ")%20%3C%2Fspan%3E%3F%3Cbr%3E%3Cdiv%20class%3D%22sp%22%3E%3C%2Fdiv%3E",
-        _EUCS.dmcd3 = "%3Cspan%20class%3D%22attention%22%3EIf%20deleted%2C%20the%20hunter%20slot%20will%20not%20be%20returned%2C%3Cbr%3Eand%20will%20be%20deleted%20forever.%3C%2Fspan%3E",
-        _EUCS.dmcd4 = "%3Cspan%20class%3D%22notes%22%3E%E3%80%90Please%20note%EF%BC%81%E3%80%91%3Cbr%3EDeleting%20a%20character%20does%20not%20constitute%20a%20character%20addition%20right.%3Cbr%3ETo%20re-create%20the%20character%2C%20you%20will%20need%20to%20%3Cbr%3Epurchase%20a%20new%20character%20addition%20right.%3C%2Fspan%3E",
-        _EUCS.dmcd4_2 = "%3Cspan%20class%3D%22notes%22%3EYou're%20about%20to%20remove%20the%20last%20character.%3Cbr%3E%20If%20you%20delete%20all%20the%20characters%2C%3Cbr%3Eone%20character%20for%20the%20basic%20contract%20guarantee%20will%20be%20presented.%3C%2Fspan%3E",
-        _EUCS.dmcd5 = "Character%20%3Cbr%3E",
-        _EUCS.dmcd6 = ")%20%3C%2Fspan%3ETo%20delete%3Cbr%3E",
-        _EUCS.dmcd7 = "%3Cspan%20class%3D%22attention%22%3EEnter%20the%20ID%20of%20the%20character%20you%20want%20to%20delete%20and%20click%20the%20%3Cbr%3E%20%5BDelete%5D%20button.%3C%2Fspan%3E%3Cbr%3E%3Cdiv%20class%3D%22sp%22%3E%3C%2Fdiv%3E",
-        _EUCS.dmcd8 = "%3Cform%20action%3D%22javascript%3Avoid(0)%3B%22%3E%3Cinput%20type%3D%22text%22%20border%3D%220%22%20align%3D%22left%22%20name%3D%22del_uid%22%20id%3D%22del_uid%22%3E%3C%2Fform%3E",
-        _EUCS.dmcd9 = "The%20character%20could%20not%20be%20deleted.%3Cbr%3E%3Cdiv%20class%3D%22sp%22%3E%3C%2Fdiv%3E%3Cspan%20class%3D%22attention%22%3EThe%20specified%20character%20ID%20and%20the%20entered%20ID%20do%20not%20match.%3C%2Fspan%3E",
-        _EUCS.dmcd10 = ")%3Cbr%3EIs%20being%20deleted.%20%3Cbr%3E%20Please%20wait%20for%20a%20while.",
-        _EUCS.dmcd11 = "Failed%20to%20delete%20the%20character.%20%3Cbr%3E%20Please%20wait%20for%20a%20while%20and%20try%20again.",
-        _EUCS.dmcd12 = "Failed%20to%20delete%20the%20character.%20%3Cbr%3E%20To%20delete%20all%20characters%20%3Cbr%3E%20Please%20wait%20at%20least%207%20days%20and%20try%20again.",
-        _EUCS.dmcd13 = "%3Cspan%20class%3D%22attention%22%3EGift%20of%20characters%20for%20basic%20contract%20guarantee%20%3C%2F%20span%3E%20%3Cbr%3E%20%3Cspan%3E%20All%20characters%20have%20been%20deleted.%20%3Cbr%3E%20We%20will%20present%20one%20character%20for%20the%20basic%20contract%20guarantee!%20!!%3C%2Fspan%3E%3Cbr%3E%3Cspan%20class%3D%22notes%22%3E%E2%80%BB%20To%20delete%20this%20character%2C%20it%20will%20take%207%20days%20from%20today.%3C%2Fspan%3E",
-        _EUCS.dmcd14 = "The%20character%20has%20been%20deleted.",
-        _EUCS.dmhl0 = "The%20Hunter%20Life%20Course%20has%20expired.%20%3Cbr%3E%20Please%20purchase%20the%20Hunter%20Life%20Course%20from%20the%20following.%20%3Cbr%3E%20(Browser%20opens)",
-        _EUCS.dmhl1 = "Once%20you%20have%20purchased%20the%20Hunter%20Life%20Course%2C%20%3Cbr%3E%20please%20wait%20a%20while%20and%20then%20%3Cbr%3E%20press%20the%20re-login%20button%20below.",
-        _EUCS.dmgs0 = "Selected%20character%20%3Cbr%3E",
-        _EUCS.dmgs1 = ")%3C%2Fspan%3E%3Cbr%3E%3Cbr%3EStart%20the%20game%20with%20this%20character.%20%3Cbr%3E%20Are%20you%20sure%3F",
-        _EUCS.SIGN_EFAILED = "Failed%20to%20communicate%20with%20the%20authentication%20server",
-        _EUCS.SIGN_EILLEGAL = "Authentication%20was%20canceled%20due%20to%20incorrect%20input",
-        _EUCS.SIGN_EALERT = "An%20error%20occurred%20in%20the%20processing%20of%20the%20authentication%20server",
-        _EUCS.SIGN_EALERT_COOP = "You%20have%20selected%20an%20account%20that%20has%20not%20completed%20COG%20integration%2C%20%3Cbr%3E%20or%20a%20server%20that%20you%20cannot%20log%20in%20with%20this%20account.",
-        _EUCS.SIGN_EABORT = "Authentication%20server%20internal%20processing%20terminated%20abnormally",
-        _EUCS.SIGN_ERESPONSE = "Processing%20ended%20due%20to%20an%20error%20in%20the%20authentication%20response",
-        _EUCS.SIGN_EDATABASE = "Failed%20to%20access%20the%20database",
-        _EUCS.SIGN_ESUSPEND = "This%20account%20is%20suspended.%20Please%20check%20your%20email%20for%20more%20information",
-        _EUCS.SIGN_EELIMINATE = "This%20account%20is%20permanently%20suspended.%20Please%20check%20your%20email%20for%20more%20information",
-        _EUCS.SIGN_ECLOSE_EX = "The%20login%20process%20is%20very%20busy.%20%3Cbr%3E%20Please%20log%20in%20again%20after%20a%20while.",
-        _EUCS.SIGN_EIPADDR = "You%20cannot%20connect%20to%20the%20game%20server%20from%20your%20environment.%20%3Cbr%3E%20For%20details%2C%20please%20write%20this%20error%20message%20and%20contact%20us%20from%20the%20%3Cbr%3E%20MHF-Z%20Inquiry%20Desk.",
-        _EUCS.SIGN_EOTHER = "ID%20authentication%20failed.",
-        _EUCS.SIGN_EAPP = "Authentication%20failed%20with%20an%20unexpected%20error%20in%20the%20app.",
-        _EUCS.SRV_MNT = "%3Cspan%20class%3D%22attention%22%3EYou%20can't%20log%20in%20because%20the%20server%20is%20currently%20under%20maintenance.%20%3C%2F%20span%3E%20%3Cbr%3E%20%3Cbr%3E%20Please%20wait%20for%20a%20while%20until%20the%20maintenance%20is%20completed."
+        _EUCS.dmb7 = "Buy now",
+        _EUCS.dmb8 = "Not now",
+        _EUCS.dmb9 = "Not now",
+        _EUCS.dmt0 = "Trial course registration is required.<br>Register for a trial course below.<br>(You can register for free).",
+        _EUCS.dmt1 = "Once you have registered for the trial course,<br>please wait a moment before pressing<br>the [Refresh Login] button.",
+        _EUCS.dmca0 = "Purchase additional character rights.<br>Press BUY NOW below.<br>(Browser will open)",
+        _EUCS.dmca1 = "Once you have completed the purchase of<br>additional character rights,<br>please wait a moment and then press [Refresh Login] button below.",
+        _EUCS.dmcd0 = "Are you sure you want to Delete the character<br>",
+        _EUCS.dmcd1 = "<span class='uid'> (ID:",
+        _EUCS.dmcd2 = ") </span>?<br><div class='sp'></div>",
+        _EUCS.dmcd3 = "<span class='attention'>If deleted, the hunter slot will not be returned,<br>and will be deleted forever.</span>",
+        _EUCS.dmcd4 = "<span class='notes'>[Please note!]<br>Deleting a character does not constitute a character addition right.<br>To re-create the character, you will need to <br>purchase a new character addition right.</span>",
+        _EUCS.dmcd4_2 = "<span class='notes'>You're about to remove the last character.<br> If you delete all the characters,<br>one character for the basic contract guarantee will be presented.</span>",
+        _EUCS.dmcd5 = "Character <br>",
+        _EUCS.dmcd6 = ") </span>to delete<br>",
+        _EUCS.dmcd7 = "<span class='attention'>Enter the ID of the character you want to delete then click the <br> [Delete] button.</span><br><div class='sp'></div>",
+        _EUCS.dmcd8 = "<form action='javascript:void(0);'><input type='text' border='0' align='left' name='del_uid' id='del_uid'></form>",
+        _EUCS.dmcd9 = "The character could not be deleted.<br><div class='sp'></div><span class='attention'>The specified character ID and the entered ID do not match.</span>",
+        _EUCS.dmcd10 = ")<br>is being deleted. <br> Please wait.",
+        _EUCS.dmcd11 = "Failed to delete the character. <br> Please wait a moment and try again.",
+        _EUCS.dmcd12 = "Failed to delete the character. <br> To delete all characters <br> Please wait at least 7 days and try again.",
+        _EUCS.dmcd13 = "<span class='attention'>Gift of characters for basic contract guarantee </span> <br> <span></span> All characters have been deleted. <br> We will present one character for the basic contract guarantee!</span><br><span class='notes'>※ To delete this character, it will take 7 days from today.</span>",
+        _EUCS.dmcd14 = "The character has been deleted.",
+        _EUCS.dmhl0 = "The Hunter Life Course has expired. <br> Please purchase the Hunter Life course by clicking [Buy Now]. <br> (Browser will open)",
+        _EUCS.dmhl1 = "Once you have purchased the Hunter Life Course, <br> please wait a while and then <br> press [Refresh Login] button below.",
+        _EUCS.dmgs0 = "Selected character <br>",
+        _EUCS.dmgs1 = ")</span><br><br>Start the game with this character. <br> Are you sure?",
+        _EUCS.SIGN_EFAILED = "Failed to communicate with the authentication server.",
+        _EUCS.SIGN_EILLEGAL = "Authentication was canceled due to incorrect input.",
+        _EUCS.SIGN_EALERT = "An error occurred in the processing of the authentication server.",
+        _EUCS.SIGN_EALERT_COOP = "You have selected an account that has not completed COG integration, <br> or a server that you cannot log in with this account.",
+        _EUCS.SIGN_EABORT = "Authentication server internal processing terminated abnormally.",
+        _EUCS.SIGN_ERESPONSE = "Processing ended due to an error in the authentication response.",
+        _EUCS.SIGN_EDATABASE = "Failed to communicate with the database.",
+        _EUCS.SIGN_ESUSPEND = "This account is suspended.",
+        _EUCS.SIGN_EELIMINATE = "This account is permanently suspended.",
+        _EUCS.SIGN_ECLOSE_EX = "The login server is congested. <br> Please try again after a while.",
+        _EUCS.SIGN_EIPADDR = "You cannot connect to the game server from your region.",
+        _EUCS.SIGN_EOTHER = "ID authentication failed.",
+        _EUCS.SIGN_EAPP = "Authentication failed with an unexpected error in the app.",
+        _EUCS.SIGN_EPASS = "Password didn't match entered ID.",
+        _EUCS.SRV_MNT = "<span class='attention'>You can't log in because the server is currently under maintenance. </span> <br> <br> Please wait for a while until the maintenance is completed."
 }
     (); var _EXT_MODE = "launcher", _MODE_BRANCH = !1;
 
@@ -315,7 +313,7 @@ function DoStartUpdate() {
     "use strict";
     extPreTry();
     try {
-        return window.external.startUpdate()
+        return false
     } catch (e) {
         return extCatchReturn(!0)
     }
@@ -568,24 +566,24 @@ function readCookie() {
     try { e = document.cookie } catch (e) { }
     if ("" !== e) {
         e = e.split(";");
-        for (
-            var E = 0; E < e.length; E++) {
+        for (var E = 0; E < e.length; E++) {
             var t = e[E].split("="), r = t[0].split(" ").join("");
-            _TRG_STORAGE_KEY[r] && (_STORAGE[r] = decodeURIComponent(t[1]))
+            _TRG_STORAGE_KEY[r]=r && (_STORAGE[r] = decodeURIComponent(t[1]));
         }
-    } _STORAGE["cogid" + _EXE_MUTEX] || (_STORAGE["cogid" + _EXE_MUTEX] = "")
+    } _STORAGE["cogid" + _EXE_MUTEX] || (_STORAGE["cogid" + _EXE_MUTEX] = ""), _STORAGE["pw" + _EXE_MUTEX] || (_STORAGE["pw" + _EXE_MUTEX] = "")
 }
 
 function writeCookie() {
     "use strict";
     var e = [];
-    for (
-        var E in _STORAGE) _STORAGE.hasOwnProperty(E) && e.push(E + "=" + _STORAGE[E]);
+    for (var E in _STORAGE)
+        _STORAGE.hasOwnProperty(E) && e.push(E + "=" + _STORAGE[E]);
     if (e.length) {
-        var t = new Date; t.setDate(t.getDate() + 365);
+        var t = new Date;
+        t.setDate(t.getDate() + 365);
         try {
-            for (
-                var r = 0; r < e.length; r++)document.cookie = e[r] + "; expires=" + t.toGMTString()
+            for (var r = 0; r < e.length; r++)
+                document.cookie = e[r] + "; expires=" + t.toGMTString()
         } catch (e) { }
     }
 }
@@ -1079,29 +1077,17 @@ function startUpdateProcess() {
     $("#launcher_update_progress .bar_area .total_progress").width(0)
     $("#launcher_login_panel").hide()
 
-    // _UPD_POLLING ? DoStartUpdate() ? (_UPD_FRM_LOOP = 0, updateProgressAnimation(),
-    //     $("#launcher_update_progress").show(), setTimeout(function () { progressUpdatePercentage() }, 50)) : ($("#launcher_login_panel").show(), onAuthError(duc("uflm0"))) : finishUpdateProcess()
-    $('#launcher_update_progress').show();
-    var updateProg = 0
-    var animation = 1;
-    for (let i = 1; i < 300; i++) {
-        if (animation == 6) {
-            animation = 1
-        }
-        $("#launcher_update_progress .anim").addClass("f" + animation)
-        $("#launcher_update_progress .anim").addClass("f" + animation--)
-        $('#launcher_update_progress .bar_area .file_progress').width(updateProg);
-        $('#launcher_update_progress .bar_area .total_progress').width(updateProg);
-        updateProg++
-    }
-    $("#launcher_update_progress .anim").addClass("f7")
-
-
-    setTimeout(function () {
-        clearAnimSq();  // patched to simulate original game 
-        DoPlaySound('IDR_NIKU');   // patched to simulate original game 
-        finishUpdateProcess();
-    }, 1000);
+    _UPD_POLLING ?
+        DoStartUpdate() ?
+            (_UPD_FRM_LOOP = 0,
+                    updateProgressAnimation(),
+                    $("#launcher_update_progress").show(),
+                    setTimeout(function () {
+                        progressUpdatePercentage()
+                    }, 50)
+            ) : (
+                finishUpdateProcess()
+            ) : finishUpdateProcess()
 }
 
 var _AT_IS_ENABLED = !0,
@@ -1175,9 +1161,17 @@ function loginPolling() {
             case "DELETE_ERROR_MNC":
                 break;
             case "AUTH_SUCCESS":
-                if (stopLoginPolling(), hideAuthProgress(),
-                    _COG_MODE && ($(_AT_SEL_ICHK).hasClass("checked") && (_STORAGE["cogid" + _EXE_MUTEX] = $(_AT_SEL_ID).val(),
-                        writeCookie()), $("#launcher_version p.login_id").text($(_AT_SEL_ID).val() + "@" + $(_AT_SEL_SRV).text()), !isTrEnabled()))
+                if (stopLoginPolling(),
+                    hideAuthProgress(),
+                    _COG_MODE && (
+                        $(_AT_SEL_ICHK).hasClass("checked") && (
+                            _STORAGE["cogid" + _EXE_MUTEX] = $(_AT_SEL_ID).val(),
+                            writeCookie()
+                        ), (
+                            _STORAGE["pw" + _EXE_MUTEX] = $(_AT_SEL_PW).val(),
+                            writeCookie()
+                        ), $("#launcher_version p.login_id").text($(_AT_SEL_ID).val() + "@" + $(_AT_SEL_SRV).text()), !isTrEnabled()
+                    ))
                     return void showNoTRDialog(); startUpdateProcess();
                 break;
             case "AUTH_ERROR_NET":
@@ -1209,6 +1203,8 @@ function loginPolling() {
                     case "SIGN_EALREADY": onAuthError(), showMhfMaintenanceDialog();
                         break;
                     case "SIGN_ERIGHT": isTrEnabled() ? onAuthError(duc("SIGN_EOTHER")) : (onAuthError(), showNoTRDialog());
+                        break;
+                    case "SIGN_EPASS": onAuthError(duc(E));
                         break;
                     default: onAuthError(duc("SIGN_EOTHER"))
                 }
@@ -1322,9 +1318,9 @@ function initSrvSelList() {
 
 function chechIdInputState() {
     "use strict"; "" ===
-        $(_AT_SEL_ID).val() ? ($(_AT_SEL_ID).val($(_AT_SEL_ID).attr("default")),
-            $(_AT_SEL_ID).css("color", "#7f8095")) :
-        $(_AT_SEL_ID).css("color", "#fff")
+        $(_AT_SEL_ID).val()
+        ? ($(_AT_SEL_ID).val($(_AT_SEL_ID).attr("default")), $(_AT_SEL_ID).css("color", "#7f8095"))
+        : $(_AT_SEL_ID).css("color", "#fff")
 }
 
 function showAuthProgress() {
@@ -1380,31 +1376,40 @@ function beginAuthProcess(e) {
     "use strict";
     if ($("#btn_config").hide(),
         e && (_AT_IS_ENABLED = !0, clearLog()), _AT_IS_ENABLED)
-        if (DoPlaySound("IDR_WAV_PRE_LOGIN"),
+        if (
+            DoPlaySound("IDR_WAV_PRE_LOGIN"),
             switchEvtPhase("auth"),
-            switchAuthMode(), _COG_MODE) {
+            switchAuthMode(), _COG_MODE
+        ) {
             if ("" === $(_AT_SEL_ID).val() || $(_AT_SEL_ID).val() === $(_AT_SEL_ID).attr("default"))
                 onAuthError(duc("afipl"), "w");
             else if (authExec()) {
                 _AT_IS_ENABLED = !1,
-                    lockAuthEdit(),
-                    showAuthProgress(),
-                    clearBBTO();
+                lockAuthEdit(),
+                showAuthProgress(),
+                clearBBTO();
                 var E = setTimeout(function () { onBackboneTimeout() }, 6e4);
-                _AT_BB_TOI = E, $(_AT_SEL_LBTN).addClass("disabled"), $(_AT_SEL_LBTN).fadeTo(200, .6),
-                    createShortLifeAuthKey($(_AT_SEL_ID).val(), $(_AT_SEL_PW).val())
+                _AT_BB_TOI = E,
+                $(_AT_SEL_LBTN).addClass("disabled"),
+                $(_AT_SEL_LBTN).fadeTo(200, .6),
+                createShortLifeAuthKey($(_AT_SEL_ID).val(), $(_AT_SEL_PW).val())
             }
         }
         else
-            _NHN_MODE ? (_AT_IS_ENABLED = !1,
-                lockAuthEdit(),
-                showAuthProgress(),
-                _AT_STATUS = "AUTH_NULL",
-                DoLoginHangame()) : (_AT_IS_ENABLED = !1,
+            _NHN_MODE
+                ? (
+                    _AT_IS_ENABLED = !1,
                     lockAuthEdit(),
                     showAuthProgress(),
                     _AT_STATUS = "AUTH_NULL",
-                    DoLoginDmm()),
+                    DoLoginHangame()
+                ) : (
+                    _AT_IS_ENABLED = !1,
+                    lockAuthEdit(),
+                    showAuthProgress(),
+                    _AT_STATUS = "AUTH_NULL",
+                    DoLoginDmm()
+                ),
                 _AT_TOI = setInterval(function () {
                     loginPolling()
                 }, 1e3)
@@ -1412,7 +1417,7 @@ function beginAuthProcess(e) {
 
 function isAutoLogin() {
     "use strict";
-    var e = !1;
+    var e = 1;
     switch (_AT_MODE = DoGetMhfBootMode()) {
         case "_MHF_SELFUP":
         case "_MHF_DMM_SELF_UPDATE":
@@ -1434,6 +1439,7 @@ function setAuthHover(e) {
 }
 
 function forceFocus(e) {
+    console.log('forceFocus:\ne='+e);
     "use strict";
     if ($(e).is(":visible")) {
         switch (e) {
@@ -1485,9 +1491,22 @@ function initAuth() {
     "use strict";
     if (_COG_MODE && (_AT_FOCUS_ELMS.push(_AT_SEL_ID), _AT_FOCUS_ELMS.push(_AT_SEL_PW)), initSrvSelList(), _AT_FOCUS_ELMS.push(_AT_SEL_LBTN), _COG_MODE && (_AT_FOCUS_ELMS.push(_AT_SEL_ICHK), _AT_FOCUS_ELMS.push(_AT_SEL_PFGT)), $(_AT_SEL_LBTN).click(function () { _AT_IS_NO_SRV ? onAuthError(duc("afnsrv")) : (addEvent("login_click"), beginAuthProcess()) }), _AT_IS_AUTOLC = isAutoLogin(), _COG_MODE) {
         readCookie();
-        var e = ""; "" === (e = DoGetUserId()) && _MODE_BRANCH && (e = DoDebugGetIniUserId()), "" === e && _STORAGE["cogid" + _EXE_MUTEX] && (e = _STORAGE["cogid" + _EXE_MUTEX]), $(_AT_SEL_ID).val(e), chechIdInputState(), $(_AT_SEL_ID).blur(function () { chechIdInputState() }), $(_AT_SEL_ID).focus(function () { DoPlaySound("IDR_WAV_OK"), $(_AT_SEL_ID).val() === $(_AT_SEL_ID).attr("default") && ($(_AT_SEL_ID).val(""), $(_AT_SEL_ID).css("color", "#fff")), setAuthHover(_AT_SEL_ID) });
+        var e = "";
+        "" === (e = DoGetUserId()) && _MODE_BRANCH && (e = DoDebugGetIniUserId()),
+        "" === e && _STORAGE["cogid" + _EXE_MUTEX] && (e = _STORAGE["cogid" + _EXE_MUTEX]),
+            $(_AT_SEL_ID).val(e),
+            chechIdInputState(),
+            $(_AT_SEL_ID).blur(function () { chechIdInputState() }),
+            $(_AT_SEL_ID).focus(function () {
+                DoPlaySound("IDR_WAV_OK"),
+                $(_AT_SEL_ID).val() === $(_AT_SEL_ID).attr("default") && ($(_AT_SEL_ID).val(""), $(_AT_SEL_ID).css("color", "#fff")),
+                setAuthHover(_AT_SEL_ID)
+            });
         var E = "";
-        if ("" === (E = DoGetPassword()) && _MODE_BRANCH && (E = DoDebugGetIniPassword()), E = "" !== E ? E : $(_AT_SEL_PW).attr("default"), $(_AT_SEL_PW).val(E), $(_AT_SEL_PW).focus(function () { DoPlaySound("IDR_WAV_OK"), setAuthHover(_AT_SEL_PW) }), $(_AT_SEL_ID + "," + _AT_SEL_PW).keydown(function (e) {
+        if (
+            "" === (E = DoGetPassword()) && _MODE_BRANCH && (E = DoDebugGetIniPassword()),
+            "" === E && _STORAGE["pw" + _EXE_MUTEX] && (E = _STORAGE["pw" + _EXE_MUTEX]),
+            E = "" !== E ? E : $(_AT_SEL_PW).attr("default"), $(_AT_SEL_PW).val(E), $(_AT_SEL_PW).focus(function () { DoPlaySound("IDR_WAV_OK"), setAuthHover(_AT_SEL_PW) }), $(_AT_SEL_ID + "," + _AT_SEL_PW).keydown(function (e) {
             switch (e.which) {
                 case 117:
                     return !1;
@@ -1555,7 +1574,7 @@ function initAuth() {
                 case 222:
                 case 226: DoPlaySound("IDR_WAV_SEL")
             }
-        }), "" !== e && "" === E && forceFocus(_AT_SEL_PW), $(_AT_SEL_ICHK).click(function () { $(_AT_SEL_ICHK).toggleClass("checked"), DoPlaySound("IDR_WAV_OK"), $(_AT_SEL_ICHK).hasClass("checked") ? addEvent("save_id") : (addEvent("delete_id"), delCoockie("cogid" + _EXE_MUTEX)) }), $(_AT_SEL_ICHK).hover(function () { setAuthHover(_AT_SEL_ICHK) }, function () { removeAuthHover() }), $(_AT_SEL_PFGT).hover(function () { setAuthHover(_AT_SEL_PFGT) }, function () { removeAuthHover() }), _STORAGE["cogid" + _EXE_MUTEX] && !_AT_IS_AUTOLC && $(_AT_SEL_ICHK).addClass("checked"), _AT_IS_AUTOLC && "" !== e && "" !== E) "_MHF_AUTOLC" === _AT_MODE && addEvent("login_autolc"), beginAuthProcess();
+        }), "" !== e && "" === E && forceFocus(_AT_SEL_PW), $(_AT_SEL_ICHK).click(function () { $(_AT_SEL_ICHK).toggleClass("checked"), DoPlaySound("IDR_WAV_OK"), $(_AT_SEL_ICHK).hasClass("checked") ? addEvent("save_id") : (addEvent("delete_id"), delCoockie("cogid" + _EXE_MUTEX), delCoockie("pw" + _EXE_MUTEX)) }), $(_AT_SEL_ICHK).hover(function () { setAuthHover(_AT_SEL_ICHK) }, function () { removeAuthHover() }), $(_AT_SEL_PFGT).hover(function () { setAuthHover(_AT_SEL_PFGT) }, function () { removeAuthHover() }), _STORAGE["cogid" + _EXE_MUTEX] && !_AT_IS_AUTOLC && $(_AT_SEL_ICHK).addClass("checked"), _AT_IS_AUTOLC && "" !== e && "" !== E) "_MHF_AUTOLC" === _AT_MODE && addEvent("login_autolc"), $(_AT_SEL_ICHK).toggleClass("checked"), beginAuthProcess();
         else if ("" !== e && "" !== E)
             for (var t = 0; t < _AT_FOCUS_ELMS.length; t++)
                 if (_AT_FOCUS_ELMS[t] === _AT_SEL_LBTN) {
@@ -1592,9 +1611,11 @@ function debugLogMsg(e, E) { "use strict"; _MODE_BRANCH && addLogMsg("DEBUG:" + 
 
 function getExLog() {
     "use strict"; stopExLog();
-    var e = DoExtractLog();
-    if (e)
-        for (var E, t = (e = (e = (e = (e = (e = (e = (e = e.split("&").join("&amp;")).split('"').join("&quot;")).split("<").join("&lt;")).split(">").join("&gt;")).replace(/[\n\r]/g, "<br>")).replace(/[\r]/g, "<br>")).replace(/[\n]/g, "<br>")).split("<br>"), r = !1, a = 0; a < t.length; a++)t[a] && (r = !(E = "w"), -1 !== t[a].indexOf("再度お試しください") && (E = "y"), -1 !== t[a].indexOf("失敗") && (E = "y"), -1 !== t[a].indexOf("できませんでした") && (E = "y"), 0 === t[a].indexOf("Winsock Ver.") && (E = "g"), 0 === t[a].indexOf("DEBUG:") && (E = "r"), 0 === t[a].indexOf("PRM[") && (E = "r"), 0 === t[a].indexOf("UG:") && (E = "r"), 0 === t[a].indexOf("Cache-Control:") && (E = "r"), 0 === t[a].indexOf("Connection:") && (E = "r"), 0 === t[a].indexOf("User-Agent:") && (E = "r"), 0 === t[a].indexOf("Host:") && (E = "r"), 0 === t[a].indexOf("]") && (E = "r"), -1 !== t[a].indexOf("(DEBUG)") && (E = "r"), 0 === t[a].indexOf("AUTH_SUCCESS") && (E = "b"), 0 === t[a].indexOf("[") && (-1 !== t[a].indexOf("%]") ? (r = !0, E = "y") : E = "r"), addLogMsg(t[a], E, r)); startExLog()
+    addLogMsg("Winsock Ver. [2.2]", "g");
+    addLogMsg(duc("afipl"), "w");
+    //var e = DoExtractLog();
+    //if (e)
+        //for (var E, t = (e = (e = (e = (e = (e = (e = (e = e.split("&").join("&amp;")).split('"').join("&quot;")).split("<").join("&lt;")).split(">").join("&gt;")).replace(/[\n\r]/g, "<br>")).replace(/[\r]/g, "<br>")).replace(/[\n]/g, "<br>")).split("<br>"), r = !1, a = 0; a < t.length; a++)t[a] && (r = !(E = "w"), -1 !== t[a].indexOf("再度お試しください") && (E = "y"), -1 !== t[a].indexOf("失敗") && (E = "y"), -1 !== t[a].indexOf("できませんでした") && (E = "y"), 0 === t[a].indexOf("Winsock Ver.") && (E = "g"), 0 === t[a].indexOf("DEBUG:") && (E = "r"), 0 === t[a].indexOf("PRM[") && (E = "r"), 0 === t[a].indexOf("UG:") && (E = "r"), 0 === t[a].indexOf("Cache-Control:") && (E = "r"), 0 === t[a].indexOf("Connection:") && (E = "r"), 0 === t[a].indexOf("User-Agent:") && (E = "r"), 0 === t[a].indexOf("Host:") && (E = "r"), 0 === t[a].indexOf("]") && (E = "r"), -1 !== t[a].indexOf("(DEBUG)") && (E = "r"), 0 === t[a].indexOf("AUTH_SUCCESS") && (E = "b"), 0 === t[a].indexOf("[") && (-1 !== t[a].indexOf("%]") ? (r = !0, E = "y") : E = "r"), addLogMsg(t[a], E, r)); startExLog()
 }
 
 function stopExLog() {
@@ -1719,6 +1740,15 @@ function openPayment() {
     "use strict";
     openDefBrowser("http://" + (_COG_MODE ? "cog" : _NHN_MODE ? "hangame" : "dmm") + "-members.mhf-z.jp/sp/payment/")
 }
+
+function doEval() {
+    try {
+        addLogMsg(eval(document.getElementById("console").value), "w");
+    } catch (e) {
+        addLog("Error on doEval: "+e, "r");
+    }
+}
+
 $(function () {
     "use strict"; $("html").keydown(function (e) {
         return !!_KEY_ACT_MODAL(e) || !1 !== _KEY_ACT_MODAL(e) && _KEY_ACT_DEF(e)
@@ -1760,7 +1790,8 @@ $(function () {
         }),
         $(_CHR_SEL_BOX + " .btn_start").click(function () {
             gameStart()
-        }), initAuth(),
+        }),
+        initAuth(),
         initScrollBar(_SEL_LOG),
         initScrollBar("#launcher_info_detail .article_frame"),
         startExLog(),
