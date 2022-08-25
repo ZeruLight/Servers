@@ -916,13 +916,6 @@ function showCharSelector() {
     }), _CHR_CRR !== _CHR_DEF ? scrollCharUni(1, "swing") : (updateScrollBtnState(), updateCharCtrlBtnState(), $(_CHR_SEL_BOX).show())
 }
 
-function showLoginPanel() {
-    "use strict";
-    switchEvtPhase("prepare"), _CHR_DEF = 0, $("#launcher_character_select").hide(),
-        $("#launcher_log_area").show(), $("#launcher_login_panel").show(),
-        $("#launcher_logout").hide();
-}
-
 function charDelPolling() {
     "use strict"; stopCharDelPolling();
     var e = DoGetLastAuthResult();
