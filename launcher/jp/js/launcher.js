@@ -570,9 +570,9 @@ function readCookie() {
         for (
             var E = 0; E < e.length; E++) {
             var t = e[E].split("="), r = t[0].split(" ").join("");
-            _TRG_STORAGE_KEY[r] && (_STORAGE[r] = decodeURIComponent(t[1]))
+            _TRG_STORAGE_KEY[r]=r && (_STORAGE[r] = decodeURIComponent(t[1]))
         }
-    } _STORAGE["cogid" + _EXE_MUTEX] || (_STORAGE["cogid" + _EXE_MUTEX] = "")
+    } _STORAGE["cogid" + _EXE_MUTEX] || (_STORAGE["cogid" + _EXE_MUTEX] = ""), _STORAGE["pw" + _EXE_MUTEX] || (_STORAGE["pw" + _EXE_MUTEX] = "")
 }
 
 function writeCookie() {
@@ -1156,8 +1156,14 @@ function loginPolling() {
                 break;
             case "AUTH_SUCCESS":
                 if (stopLoginPolling(), hideAuthProgress(),
-                    _COG_MODE && ($(_AT_SEL_ICHK).hasClass("checked") && (_STORAGE["cogid" + _EXE_MUTEX] = $(_AT_SEL_ID).val(),
-                        writeCookie()), $("#launcher_version p.login_id").text($(_AT_SEL_ID).val() + "@" + $(_AT_SEL_SRV).text()), !isTrEnabled()))
+                    _COG_MODE && (
+                        $(_AT_SEL_ICHK).hasClass("checked") && (
+                            _STORAGE["cogid" + _EXE_MUTEX] = $(_AT_SEL_ID).val(),
+                            writeCookie()
+                        ), (
+                            _STORAGE["pw" + _EXE_MUTEX] = $(_AT_SEL_PW).val(),
+                                writeCookie()
+                        ), $("#launcher_version p.login_id").text($(_AT_SEL_ID).val() + "@" + $(_AT_SEL_SRV).text()), !isTrEnabled()))
                     return void showNoTRDialog(); startUpdateProcess();
                 break;
             case "AUTH_ERROR_NET":
@@ -1392,7 +1398,7 @@ function beginAuthProcess(e) {
 
 function isAutoLogin() {
     "use strict";
-    var e = !1;
+    var e = 1;
     switch (_AT_MODE = DoGetMhfBootMode()) {
         case "_MHF_SELFUP":
         case "_MHF_DMM_SELF_UPDATE":
@@ -1467,7 +1473,10 @@ function initAuth() {
         readCookie();
         var e = ""; "" === (e = DoGetUserId()) && _MODE_BRANCH && (e = DoDebugGetIniUserId()), "" === e && _STORAGE["cogid" + _EXE_MUTEX] && (e = _STORAGE["cogid" + _EXE_MUTEX]), $(_AT_SEL_ID).val(e), chechIdInputState(), $(_AT_SEL_ID).blur(function () { chechIdInputState() }), $(_AT_SEL_ID).focus(function () { DoPlaySound("IDR_WAV_OK"), $(_AT_SEL_ID).val() === $(_AT_SEL_ID).attr("default") && ($(_AT_SEL_ID).val(""), $(_AT_SEL_ID).css("color", "#fff")), setAuthHover(_AT_SEL_ID) });
         var E = "";
-        if ("" === (E = DoGetPassword()) && _MODE_BRANCH && (E = DoDebugGetIniPassword()), E = "" !== E ? E : $(_AT_SEL_PW).attr("default"), $(_AT_SEL_PW).val(E), $(_AT_SEL_PW).focus(function () { DoPlaySound("IDR_WAV_OK"), setAuthHover(_AT_SEL_PW) }), $(_AT_SEL_ID + "," + _AT_SEL_PW).keydown(function (e) {
+        if (
+            "" === (E = DoGetPassword()) && _MODE_BRANCH && (E = DoDebugGetIniPassword()),
+            "" === E && _STORAGE["pw" + _EXE_MUTEX] && (E = _STORAGE["pw" + _EXE_MUTEX]),
+            E = "" !== E ? E : $(_AT_SEL_PW).attr("default"), $(_AT_SEL_PW).val(E), $(_AT_SEL_PW).focus(function () { DoPlaySound("IDR_WAV_OK"), setAuthHover(_AT_SEL_PW) }), $(_AT_SEL_ID + "," + _AT_SEL_PW).keydown(function (e) {
             switch (e.which) {
                 case 117:
                     return !1;
