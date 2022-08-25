@@ -1070,29 +1070,17 @@ function startUpdateProcess() {
     $("#launcher_update_progress .bar_area .total_progress").width(0)
     $("#launcher_login_panel").hide()
 
-    // _UPD_POLLING ? DoStartUpdate() ? (_UPD_FRM_LOOP = 0, updateProgressAnimation(),
-    //     $("#launcher_update_progress").show(), setTimeout(function () { progressUpdatePercentage() }, 50)) : ($("#launcher_login_panel").show(), onAuthError(duc("uflm0"))) : finishUpdateProcess()
-    $('#launcher_update_progress').show();
-    var updateProg = 0
-    var animation = 1;
-    for (let i = 1; i < 300; i++) {
-        if (animation == 6) {
-            animation = 1
-        }
-        $("#launcher_update_progress .anim").addClass("f" + animation)
-        $("#launcher_update_progress .anim").addClass("f" + animation--)
-        $('#launcher_update_progress .bar_area .file_progress').width(updateProg);
-        $('#launcher_update_progress .bar_area .total_progress').width(updateProg);
-        updateProg++
-    }
-    $("#launcher_update_progress .anim").addClass("f7")
-
-
-    setTimeout(function () {
-        clearAnimSq();  // patched to simulate original game 
-        DoPlaySound('IDR_NIKU');   // patched to simulate original game 
-        finishUpdateProcess();
-    }, 1000);
+    _UPD_POLLING ?
+        DoStartUpdate() ?
+            (_UPD_FRM_LOOP = 0,
+                    updateProgressAnimation(),
+                    $("#launcher_update_progress").show(),
+                    setTimeout(function () {
+                        progressUpdatePercentage()
+                    }, 50)
+            ) : (
+                finishUpdateProcess()
+            ) : finishUpdateProcess()
 }
 
 var _AT_IS_ENABLED = !0,
