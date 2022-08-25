@@ -854,6 +854,7 @@ function showCharSelector() {
         $("#launcher_login_panel").hide(),
         $("#launcher_update_progress").hide(),
         $("#launcher_log_area").hide(), $(_CHR_SEL_BOX).hide(),
+        $("#launcher_logout").show(),
         $(_CHR_SEL_BOX + " .units").html(""), $(_CHR_SEL_BOX + " .scroll").hide();
 
     var e = DoGetCharacterInfo();
@@ -1432,6 +1433,8 @@ function switchAuthMode() {
         $(_CHR_SEL_BOX).hide(),
         $("#launcher_log_area").show(),
         $("#launcher_login_panel").show(),
+        $("#launcher_version p.login_id").text(""),
+        $("#launcher_logout").hide(),
         $(_AT_FOCUS_ELMS[_AT_FOCUS_IDX]).addClass("hover"), forceFocus(_AT_FOCUS_ELMS[_AT_FOCUS_IDX]), _KEY_ACT_DEF = function (e) {
             if (_IS_MODAL) return !1;
             var E = _AT_FOCUS_IDX, t = !0;

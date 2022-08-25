@@ -21,6 +21,7 @@ body{background:#000; font-family:"メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴ�
 #launcher_version img{margin-left:17px; margin-top:8px; position:relative; cursor:pointer;}
 #launcher_version p{color:#dcdcdc; position:absolute; left:330px; top:75px;}
 #launcher_version p.login_id{color:#e5e5e5; font-size:12px; line-height:14px; left:0; right:5px; top:103px; text-align:right; z-index: 1000;}
+#launcher_logout{cursor: pointer; position:absolute; left:523px; top:112px; color:white;}
 #btn_config{width:281px; height:33px; position:absolute; left:137px; bottom:48px; cursor:pointer; background:no-repeat 0px 0px; z-index:1000;}
 #btn_config:hover{background-position:0px -33px;}
 #launcher_log_area{width:410px; height:86px; padding:6px 8px; position:absolute; left:65px; bottom:90px; background:no-repeat 0px 0px;}
@@ -282,6 +283,8 @@ body#dmm .dmmHide,body#dmm .cogOnly,body#dmm .nhnOnly{display:none !important;}
 <div id="launcher_version"><p class="ver"></p><p class="login_id"><script>if (_MODE_BRANCH) {document.write(String(location.host).split('-').shift() + ' rev. '+_lver);}</script></p><div class="glove"></div>
 <img src="images/logo/000_z.png" width="303" height="114" alt="MHF-Ｇ" onClick="openMemberSite();"/>
 </div>
+<!-- logout -->
+<div id="launcher_logout" onclick="DoPlaySound('IDR_WAV_OK'); switchAuthMode();" style="display:none;"><span>×</span></div>
 <!--設定ボタン-->
 <div id="btn_config" class="unselectable"></div>
 <!--ログ-->
