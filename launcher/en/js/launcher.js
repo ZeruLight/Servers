@@ -778,7 +778,7 @@ function entityRef(e) {
 }
 
 function createCharUnit(e, E, t, r, a, _, s, n) {
-    "use strict"; _ = _.split("F").join("Ｆ");
+    "use strict"; _ = _.split("F").join("Ｆ"); E = E.split("狩人申請可能").join("New Hunter");
     var o = $('<div class="unit" uid="' + t + '" name="' + E + '" hr="' + r + '" to="0"></div>');
     if (o.append($('<div class="num n' + e + '"></div>')), o.append($('<div class="sign"></div>')), o.append($('<p class="name">' + entityRef(E) + "</p>")), 0 === r) o.addClass("new"), o.append($('<p class="new">' + duc("anch") + "</p>"));
     else {
