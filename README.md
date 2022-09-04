@@ -7,7 +7,7 @@ This repository serves two purposes:
 Please note that these services are deliberately hosted without HTTPS due to MHF not supporting connecting to such pages directly.
 
 # Set up for 'Custom' server option
-Open your `hosts` file and simply add an entry such as follows `127.0.0.1 erupe.custom`.
+Open your `hosts` file and simply add an entry such as follows `12.34.56.78 erupe.custom`, where the IPv4 address is the server you are connecting to.
 
 # [/serverlist.xml](/serverlist.xml)
 This is a public server index file. You can submit your own public Erupe instance to this index by contacting us, or by sending a Pull Request with your server appended to the index file.
