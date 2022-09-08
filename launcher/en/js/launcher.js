@@ -387,7 +387,6 @@ function DoGetCharacterInfo() {
     "use strict";
     extPreTry();
     try {
-        return "<?xml version='1.0' encoding='shift_jis'?><CharacterInfo defaultUid=''><Character name='Cynthia' uid='211111' weapon='双剣' HR='7' GR='998' lastLogin='1645961490' sex='F' /><Character name='狩人申請可能' uid='311111' weapon='大剣' HR='0' GR='0' lastLogin='1650486502' sex='M' /></CharacterInfo>";
         return window.external.getCharacterInfo()
     } catch (e) {
         return extCatchReturn("")
