@@ -11,7 +11,6 @@ function trackEvent(e, E, t, r) {
     try {
         debugLogMsg(m, !1);
     } catch (e) { }
-    return
 }
 
 function CustomScroll(e) {
@@ -78,70 +77,70 @@ function duc(e) {
 } !function () {
     "use strict";
     _EUCS.xhrspr = "<!--###content###-->",
-        _EUCS.dmsrvs = "<?xml version='1.0' encoding='UTF-8'><server_groups><group nam='Server%E2%91%A0' cog='pre' /></server_groups>",
+        _EUCS.dmsrvs = "<?xml version='1.0' encoding='UTF-8'><server_groups><group nam='Localhost' cog='pre' /></server_groups>",
         _EUCS.anch = "You can create a new character. <br> Press [Start Game] to create your character.",
-        _EUCS.cwpt = "Current Weapon",
-        _EUCS.pcst = "Last Login",
-        _EUCS.afac = "Unauthorised access.",
+        _EUCS.cwpt = "Weapon",
+        _EUCS.pcst = "Last Online",
+        _EUCS.afac = "You do not have permission to do this.",
         _EUCS.afde = "Character encoding not supported.",
-        _EUCS.afnsrv = "Select a server.",
-        _EUCS.afipe = "Username or password is different.",
+        _EUCS.afnsrv = "Select a server and press the [Log In] button.",
+        _EUCS.afipe = "Wrong ID/Password.",
         _EUCS.af102 = "The server is busy at the moment.<br>Please try again later.",
-        _EUCS.af301 = "Customer authorisation is currently suspended.",
-        _EUCS.af304 = "Password has been incorrectly entered consecutively.<br>Your account has been temporarily suspended.<br>Please wait an hour before logging in.",
+        _EUCS.af301 = "The ID you have entered is temporarily suspended.",
+        _EUCS.af304 = "Authentication has been temporarily halted due to entering multiple incorrect passwords.<br>Please wait an hour and log in again.",
         _EUCS.aferr = "Unknown error occurred.",
         _EUCS.af321 = "The security card data is different.",
-        _EUCS.afipl = "After entering your username and password,<br>select your server and press the [Log In] button.",
+        _EUCS.afipl = "After entering your ID and Password,<br>select a server and press the [Log In] button.",
         _EUCS.uflm0 = "The server is currently under maintenance and cannot be joined.<br>Please try again later.",
         _EUCS.dmb0 = "Register now",
-        _EUCS.dmb1 = "Refresh Login",
+        _EUCS.dmb1 = "Refresh",
         _EUCS.dmb2 = "Delete",
-        _EUCS.dmb3 = "Don't delete",
+        _EUCS.dmb3 = "Cancel",
         _EUCS.dmb4 = "Close",
         _EUCS.dmb5 = "Yes",
         _EUCS.dmb6 = "No",
         _EUCS.dmb7 = "Buy now",
-        _EUCS.dmb8 = "Not now",
-        _EUCS.dmb9 = "Not now",
+        _EUCS.dmb8 = "Ignore",
+        _EUCS.dmb9 = "Ignore",
         _EUCS.dmt0 = "Trial course registration is required.<br>Register for a trial course below.<br>(You can register for free).",
-        _EUCS.dmt1 = "Once you have registered for the trial course,<br>please wait a moment before pressing<br>the [Refresh Login] button.",
-        _EUCS.dmca0 = "Purchase additional character rights.<br>Press BUY NOW below.<br>(Browser will open)",
-        _EUCS.dmca1 = "Once you have completed the purchase of<br>additional character rights,<br>please wait a moment and then press [Refresh Login] button below.",
-        _EUCS.dmcd0 = "Are you sure you want to Delete the character<br>",
+        _EUCS.dmt1 = "Once you have registered for the trial course,<br>please wait a moment and then press the [Refresh] button below.",
+        _EUCS.dmca0 = "Purchase an add character license?<br>Press [Buy now] below.<br>(Browser will open)",
+        _EUCS.dmca1 = "Once you have completed the purchase of an add character license, please wait a moment and then press<br>the [Refresh] button below.",
+        _EUCS.dmcd0 = "The selected character will be deleted<br>",
         _EUCS.dmcd1 = "<span class='uid'> (ID:",
-        _EUCS.dmcd2 = ") </span>?<br><div class='sp'></div>",
-        _EUCS.dmcd3 = "<span class='attention'>If deleted, the hunter slot will not be returned,<br>and will be deleted forever.</span>",
-        _EUCS.dmcd4 = "<span class='notes'>[Please note!]<br>Deleting a character does not constitute a character addition right.<br>To re-create the character, you will need to <br>purchase a new character addition right.</span>",
-        _EUCS.dmcd4_2 = "<span class='notes'>You're about to remove the last character.<br> If you delete all the characters,<br>one character for the basic contract guarantee will be presented.</span>",
-        _EUCS.dmcd5 = "Character <br>",
-        _EUCS.dmcd6 = ") </span>to delete<br>",
-        _EUCS.dmcd7 = "<span class='attention'>Enter the ID of the character you want to delete then click the <br> [Delete] button.</span><br><div class='sp'></div>",
+        _EUCS.dmcd2 = ") </span><br><div class='sp'></div>",
+        _EUCS.dmcd3 = "<span class='attention'>Deleted characters will not revert to [Ready to Hunt] status,<br>but will be completely deleted.</span> Proceed?",
+        _EUCS.dmcd4 = "<span class='notes'>[Warning]<br>You will lose the ability to add characters once an additional character has been deleted.<br>You will need to purchase a new<br>add character license to make one.</span>",
+        _EUCS.dmcd4_2 = "<span class='notes'>You're about to remove the last character.<br>If you delete all the characters, you will be provided<br>with one character under your basic contract guarantee!</span>",
+        _EUCS.dmcd5 = "<br>",
+        _EUCS.dmcd6 = ") </span> will be deleted.<br>",
+        _EUCS.dmcd7 = "<span class='attention'>Enter the ID of the selected character then click the <br> [Delete] button.</span><br><div class='sp'></div>",
         _EUCS.dmcd8 = "<form action='javascript:void(0);'><input type='text' border='0' align='left' name='del_uid' id='del_uid'></form>",
-        _EUCS.dmcd9 = "The character could not be deleted.<br><div class='sp'></div><span class='attention'>The specified character ID and the entered ID do not match.</span>",
+        _EUCS.dmcd9 = "The character could not be deleted.<br><div class='sp'></div><span class='attention'>The selected character ID and entered ID do not match.</span>",
         _EUCS.dmcd10 = ")<br>is being deleted. <br> Please wait.",
-        _EUCS.dmcd11 = "Failed to delete the character. <br> Please wait a moment and try again.",
-        _EUCS.dmcd12 = "Failed to delete the character. <br> To delete all characters <br> Please wait at least 7 days and try again.",
-        _EUCS.dmcd13 = "<span class='attention'>Gift of characters for basic contract guarantee </span> <br> <span></span> All characters have been deleted. <br> We will present one character for the basic contract guarantee!</span><br><span class='notes'>※ To delete this character, it will take 7 days from today.</span>",
-        _EUCS.dmcd14 = "The character has been deleted.",
-        _EUCS.dmhl0 = "The Hunter Life Course has expired. <br> Please purchase the Hunter Life course by clicking [Buy Now]. <br> (Browser will open)",
-        _EUCS.dmhl1 = "Once you have purchased the Hunter Life Course, <br> please wait a while and then <br> press [Refresh Login] button below.",
+        _EUCS.dmcd11 = "This character cannot be deleted. <br> Please try again later.",
+        _EUCS.dmcd12 = "This character cannot be deleted. <br> A period of 7 days from the last deletion<br>must pass in order to delete all characters.",
+        _EUCS.dmcd13 = "<span class='attention'>One character is guaranteed and provided<br>under the terms of the basic contract</span> <br> All characters have been deleted. <br> You will be provided with one character<br>under your basic contract guarantee!</span><br><span class='notes'>※ A period of 7 days from today is required<br>in order to delete this character.</span>",
+        _EUCS.dmcd14 = "Character deleted.",
+        _EUCS.dmhl0 = "The Hunter Life Course has expired. <br> Please purchase the Hunter Life course<br>by clicking [Buy now]. <br> (Browser will open)",
+        _EUCS.dmhl1 = "Once you have purchased the Hunter Life Course, <br> please wait a moment and then <br> press the [Refresh] button below.",
         _EUCS.dmgs0 = "Selected character <br>",
-        _EUCS.dmgs1 = ")</span><br><br>Start the game with this character. <br> Are you sure?",
-        _EUCS.SIGN_EFAILED = "Failed to communicate with the authentication server.",
-        _EUCS.SIGN_EILLEGAL = "Authentication was canceled due to incorrect input.",
-        _EUCS.SIGN_EALERT = "An error occurred in the processing of the authentication server.",
-        _EUCS.SIGN_EALERT_COOP = "You have selected an account that has not completed COG integration, <br> or a server that you cannot log in with this account.",
-        _EUCS.SIGN_EABORT = "Authentication server internal processing terminated abnormally.",
-        _EUCS.SIGN_ERESPONSE = "Processing ended due to an error in the authentication response.",
-        _EUCS.SIGN_EDATABASE = "Failed to communicate with the database.",
-        _EUCS.SIGN_ESUSPEND = "This account is suspended.",
-        _EUCS.SIGN_EELIMINATE = "This account is permanently suspended.",
-        _EUCS.SIGN_ECLOSE_EX = "The login server is congested. <br> Please try again after a while.",
+        _EUCS.dmgs1 = ")</span><br><br>Log in and start the game <br> with the selected character?",
+        _EUCS.SIGN_EFAILED = "Failed to connect to authentication server.",
+        _EUCS.SIGN_EILLEGAL = "Authentication cancelled due to wrong input.",
+        _EUCS.SIGN_EALERT = "A processing error has occured with the authentication server.",
+        _EUCS.SIGN_EALERT_COOP = "The entered ID has not completed COG integration, <br> or a server was selected that you cannot log in to with this ID.",
+        _EUCS.SIGN_EABORT = "Internal process at the authentication server has crashed.",
+        _EUCS.SIGN_ERESPONSE = "Process terminated due to abnormal authentication response.",
+        _EUCS.SIGN_EDATABASE = "Failed to access database.",
+        _EUCS.SIGN_ESUSPEND = "This account has been temporarily suspended..",
+        _EUCS.SIGN_EELIMINATE = "This account has been permanently suspended.",
+        _EUCS.SIGN_ECLOSE_EX = "Login failed due to too much traffic.",
         _EUCS.SIGN_EIPADDR = "You cannot connect to the game server from your region.",
-        _EUCS.SIGN_EOTHER = "ID authentication failed.",
-        _EUCS.SIGN_EAPP = "Authentication failed with an unexpected error in the app.",
-        _EUCS.SIGN_EPASS = "Password didn't match entered ID.",
-        _EUCS.SRV_MNT = "<span class='attention'>You can't log in because the server is currently under maintenance. </span> <br> <br> Please wait for a while until the maintenance is completed."
+        _EUCS.SIGN_EOTHER = "Failed to authenticate ID.",
+        _EUCS.SIGN_EAPP = "Authentication failed with an unexpected error in the client.",
+        _EUCS.SIGN_EPASS = "Wrong ID/Password.",
+        _EUCS.SRV_MNT = "<span class='attention'>Unable to log in due to maintenance being performed.</span>"
 }
     (); var _EXT_MODE = "launcher", _MODE_BRANCH = !1;
 
@@ -388,6 +387,7 @@ function DoGetCharacterInfo() {
     "use strict";
     extPreTry();
     try {
+        return "<?xml version='1.0' encoding='shift_jis'?><CharacterInfo defaultUid=''><Character name='Cynthia' uid='211111' weapon='双剣' HR='7' GR='998' lastLogin='1645961490' sex='F' /><Character name='狩人申請可能' uid='311111' weapon='大剣' HR='0' GR='0' lastLogin='1650486502' sex='M' /></CharacterInfo>";
         return window.external.getCharacterInfo()
     } catch (e) {
         return extCatchReturn("")
@@ -778,7 +778,7 @@ function entityRef(e) {
 }
 
 function createCharUnit(e, E, t, r, a, _, s, n) {
-    "use strict"; _ = _.split("F").join("Ｆ"); E = E.split("狩人申請可能").join("New Hunter");
+    "use strict"; _ = _.split("F").join("Ｆ"); E = E.split("狩人申請可能").join("Ready to Hunt");
     var o = $('<div class="unit" uid="' + t + '" name="' + E + '" hr="' + r + '" to="0"></div>');
     if (o.append($('<div class="num n' + e + '"></div>')), o.append($('<div class="sign"></div>')), o.append($('<p class="name">' + entityRef(E) + "</p>")), 0 === r) o.addClass("new"), o.append($('<p class="new">' + duc("anch") + "</p>"));
     else {
@@ -1692,7 +1692,7 @@ function showDelCharDialog3(e, E) { "use strict"; showModalDialog(duc("dmcd5") +
 
 function showWaitDelCharIdErrorDialog() { "use strict"; showModalDialog(duc("dmcd9"), [{ label: duc("dmb4"), cmd: "charDelReset();" }]) }
 
-function showWaitDelCharDialog(e, E) { "use strict"; showModalDialog(duc("dmcd5") + e + " (ID:" + E + duc("dmcd10"), []), charDelete() }
+function showWaitDelCharDialog(e, E) { "use strict"; showModalDialog(e + " (ID:" + E + duc("dmcd10"), []), charDelete() }
 
 function showFailDelCharDialog(e) { "use strict"; showModalDialog(duc(1 < e ? "dmcd11" : "dmcd12"), [{ label: duc("dmb4"), cmd: "charDelReset();" }]) }
 
