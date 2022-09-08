@@ -77,7 +77,7 @@ function duc(e) {
 } !function () {
     "use strict";
     _EUCS.xhrspr = "<!--###content###-->",
-        _EUCS.dmsrvs = "<?xml version='1.0' encoding='UTF-8'><server_groups><group nam='Localhost' cog='pre' /></server_groups>",
+        _EUCS.dmsrvs = "<?xml version='1.0' encoding='UTF-8'><server_groups><group idx='1' nam='Localhost' cog='pre' /></server_groups>",
         _EUCS.anch = "You can create a new character. <br> Press [Start Game] to create your character.",
         _EUCS.cwpt = "Weapon",
         _EUCS.pcst = "Last Online",
@@ -1306,6 +1306,29 @@ function switchAuthSrv(e) { "use strict"; _AT_COG_MODE = $(e).attr("mode"), _AT_
 
 function hideSrvSelList() { "use strict"; $(_AT_SEL_SBOX).hide(), _AT_SBOX_IS_ENABLED = !1 }
 
+function printSrvMsg(e) {
+    switch (e) {
+        case 'local':
+            addLogMsg("Erupe must be running on this PC!", "y");
+            break;
+        case 'rain':
+            addLogMsg("Discord: /BSYusKW7Ps", "y");
+            break;
+        case 'hv':
+            addLogMsg("Discord: /YuE42eh", "y");
+            break;
+        case 'fronteiras':
+            addLogMsg("Discord: /Agjkad7zdU", "y");
+            break;
+        case 'renewal':
+            addLogMsg("Discord: /u9Jyenppx7", "y");
+            break;
+        case 'custom':
+            addLogMsg("erupe.custom must be set in hosts!", "y");
+            break;
+    }
+}
+
 function initSrvSelList() {
     "use strict";
     var e = "<div>" + DoGetServerListXml() + "</div>",
@@ -1334,6 +1357,7 @@ function initSrvSelList() {
                     switchAuthSrv(this),
                     E = parseInt($(this).attr("idx"), 10),
                     DoSetIniLastServerIndex(String(E)),
+                    printSrvMsg($(this).attr("svid")),
                     hideSrvSelList()
             })) :
             $(_AT_SEL_SBTN).hide(),
