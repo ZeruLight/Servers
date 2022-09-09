@@ -5,6 +5,6 @@
   <group idx='2' nam='Rain (ID)' ip='103.186.0.221' port='53312' svid='rain'/>
   <group idx='3' nam='Hunsterverse (US)' ip='129.213.54.221' port='53312' svid='hv'/>
   <group idx='4' nam='Renewal (US)' ip='70.80.86.153' port='53312' svid='renewal'/>
-  <group idx='5' nam='Fronteiras (BR)' ip='177.71.205.61' port='53312' svid='fronteiras'/>
+  <group idx='5' nam='Arca (BR)' ip='177.71.205.61' port='53312' svid='arca'/>
   <group idx='99' nam='Custom' ip='erupe.custom' port='53312' svid='custom'/>
 </server_groups>

@@ -1317,7 +1317,7 @@ function printSrvMsg(e) {
         case 'hv':
             addLogMsg("Discord: /YuE42eh", "y");
             break;
-        case 'fronteiras':
+        case 'arca':
             addLogMsg("Discord: /Agjkad7zdU", "y");
             break;
         case 'renewal':
