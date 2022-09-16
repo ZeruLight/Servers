@@ -599,12 +599,12 @@ function delCoockie(e) {
     "use strict";
     var e, E, t, r = location.host;
 
-    if (_COG_MODE = -1 !== r.indexOf("zerulight"), _NHN_MODE = -1 !== r.indexOf("hangame-"), t = _COG_MODE ? "cog-" : _NHN_MODE ? "hangame-" : "dmm-", modeCheck(r, "mhf-z.jp")) _MODE_BRANCH = !1, e = "", E = "jp";
+    if (_COG_MODE = -1 !== r.indexOf(""), _NHN_MODE = -1 !== r.indexOf("hangame-"), t = _COG_MODE ? "cog-" : _NHN_MODE ? "hangame-" : "dmm-", modeCheck(r, "mhf-z.jp")) _MODE_BRANCH = !1, e = "", E = "jp";
     else {
         if (!modeCheck(r, "mhf-z.net"))
             return;
         _MODE_BRANCH = !0, e = -1 !== r.indexOf("stage") ? "stage-" : "debug-", E = "net"
-    } (_HOSTS = {}).s = "http://zerulight.cc", _HOSTS.g = "http://zerulight.cc", _HOSTS.i = "http://zerulight.cc", _HOSTS.p = "http://zerulight.cc", _HOSTS.c = "http://zerulight.cc"
+    }
 }();
 var _BNR_INT = 5e3, _BNR_CRR = 0, _BNR_TOI = null;
 
