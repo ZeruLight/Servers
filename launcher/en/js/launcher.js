@@ -1470,7 +1470,7 @@ function beginAuthProcess(e) {
 
 function isAutoLogin() {
     "use strict";
-    var e = 1;
+    var e = !1;
     switch (_AT_MODE = DoGetMhfBootMode()) {
         case "_MHF_SELFUP":
         case "_MHF_DMM_SELF_UPDATE":
