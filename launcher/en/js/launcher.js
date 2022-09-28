@@ -1664,11 +1664,9 @@ function debugLogMsg(e, E) { "use strict"; _MODE_BRANCH && addLogMsg("DEBUG:" + 
 
 function getExLog() {
     "use strict"; stopExLog();
-    addLogMsg("Winsock Ver. [2.2]", "g");
-    addLogMsg(duc("afipl"), "w");
-    //var e = DoExtractLog();
-    //if (e)
-        //for (var E, t = (e = (e = (e = (e = (e = (e = (e = e.split("&").join("&amp;")).split('"').join("&quot;")).split("<").join("&lt;")).split(">").join("&gt;")).replace(/[\n\r]/g, "<br>")).replace(/[\r]/g, "<br>")).replace(/[\n]/g, "<br>")).split("<br>"), r = !1, a = 0; a < t.length; a++)t[a] && (r = !(E = "w"), -1 !== t[a].indexOf("再度お試しください") && (E = "y"), -1 !== t[a].indexOf("失敗") && (E = "y"), -1 !== t[a].indexOf("できませんでした") && (E = "y"), 0 === t[a].indexOf("Winsock Ver.") && (E = "g"), 0 === t[a].indexOf("DEBUG:") && (E = "r"), 0 === t[a].indexOf("PRM[") && (E = "r"), 0 === t[a].indexOf("UG:") && (E = "r"), 0 === t[a].indexOf("Cache-Control:") && (E = "r"), 0 === t[a].indexOf("Connection:") && (E = "r"), 0 === t[a].indexOf("User-Agent:") && (E = "r"), 0 === t[a].indexOf("Host:") && (E = "r"), 0 === t[a].indexOf("]") && (E = "r"), -1 !== t[a].indexOf("(DEBUG)") && (E = "r"), 0 === t[a].indexOf("AUTH_SUCCESS") && (E = "b"), 0 === t[a].indexOf("[") && (-1 !== t[a].indexOf("%]") ? (r = !0, E = "y") : E = "r"), addLogMsg(t[a], E, r)); startExLog()
+    var e = DoExtractLog();
+    if (e)
+        for (var E, t = (e = (e = (e = (e = (e = (e = (e = e.split("&").join("&amp;")).split('"').join("&quot;")).split("<").join("&lt;")).split(">").join("&gt;")).replace(/[\n\r]/g, "<br>")).replace(/[\r]/g, "<br>")).replace(/[\n]/g, "<br>")).split("<br>"), r = !1, a = 0; a < t.length; a++)t[a] && (r = !(E = "w"), -1 !== t[a].indexOf("再度お試しください") && (E = "y"), -1 !== t[a].indexOf("失敗") && (E = "y"), -1 !== t[a].indexOf("できませんでした") && (E = "y"), 0 === t[a].indexOf("Winsock Ver.") && (E = "g"), 0 === t[a].indexOf("DEBUG:") && (E = "r"), 0 === t[a].indexOf("PRM[") && (E = "r"), 0 === t[a].indexOf("UG:") && (E = "r"), 0 === t[a].indexOf("Cache-Control:") && (E = "r"), 0 === t[a].indexOf("Connection:") && (E = "r"), 0 === t[a].indexOf("User-Agent:") && (E = "r"), 0 === t[a].indexOf("Host:") && (E = "r"), 0 === t[a].indexOf("]") && (E = "r"), -1 !== t[a].indexOf("(DEBUG)") && (E = "r"), 0 === t[a].indexOf("AUTH_SUCCESS") && (E = "b"), 0 === t[a].indexOf("[") && (-1 !== t[a].indexOf("%]") ? (r = !0, E = "y") : E = "r"), addLogMsg(t[a], E, r)); startExLog()
 }
 
 function stopExLog() {
@@ -1798,7 +1796,7 @@ function doEval() {
     try {
         addLogMsg(eval(document.getElementById("console").value), "w");
     } catch (e) {
-        addLog("Error on doEval: "+e, "r");
+        addLogMsg("Error on doEval: "+e, "r");
     }
 }
 
