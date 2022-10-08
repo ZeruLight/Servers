@@ -1323,6 +1323,9 @@ function printSrvMsg(e) {
         case 'renewal':
             addLogMsg("Discord: /u9Jyenppx7", "y");
             break;
+        case 'frontiereu':
+            addLogMsg("Discord: /6xu748Pw2q", "y");
+            break;
         case 'custom':
             addLogMsg("erupe.custom must be set in hosts!", "y");
             break;
