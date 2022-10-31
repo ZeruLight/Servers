@@ -1312,19 +1312,19 @@ function printSrvMsg(e) {
             addLogMsg("Erupe must be running on this PC!", "y");
             break;
         case 'rain':
-            addLogMsg("Discord: /BSYusKW7Ps", "y");
+            addLogMsg("Rain Discord: /BSYusKW7Ps", "y");
             break;
         case 'hv':
-            addLogMsg("Discord: /YuE42eh", "y");
+            addLogMsg("Hunsterverse Discord: /YuE42eh", "y");
             break;
         case 'arca':
-            addLogMsg("Discord: /Agjkad7zdU", "y");
+            addLogMsg("ARCA Discord: /Agjkad7zdU", "y");
             break;
         case 'renewal':
-            addLogMsg("Discord: /u9Jyenppx7", "y");
+            addLogMsg("Renewal Discord: /u9Jyenppx7", "y");
             break;
         case 'frontiereu':
-            addLogMsg("Discord: /6xu748Pw2q", "y");
+            addLogMsg("Frontier EU Discord: /6xu748Pw2q", "y");
             break;
         case 'custom':
             addLogMsg("erupe.custom must be set in hosts!", "y");
