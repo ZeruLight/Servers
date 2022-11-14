@@ -1,5 +1,7 @@
 var ___ga_uaid = "";
 
+var updateDisabled = true;
+
 function trackPageView(e, E) {
     console.log('trackPageView:\ne='+e+'\nE='+E);
     return
@@ -312,7 +314,11 @@ function DoStartUpdate() {
     "use strict";
     extPreTry();
     try {
-        return false
+        if (updateDisabled) {
+            return false
+        } else {
+            return window.external.startUpdate()
+        }
     } catch (e) {
         return extCatchReturn(!0)
     }
@@ -1115,7 +1121,9 @@ function startUpdateProcess() {
                         progressUpdatePercentage()
                     }, 50)
             ) : (
-                finishUpdateProcess()
+                updateDisabled
+                    ? finishUpdateProcess()
+                    : $("#launcher_login_panel").show(), onAuthError(duc("uflm0"))
             ) : finishUpdateProcess()
 }
 
