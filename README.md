@@ -21,7 +21,7 @@ This is a publicly hosted launcher server for Erupe. This is able to be connecte
 * PHP
 * Python 3
 ### Usage
-1. Create a folder named `mhfdat` and two folder with named `dat` and `exe`.
+1. Create a folder named `mhfdat` and two folders inside named `dat` and `exe`.
    (Every file in `exe` goes into the root client folder, every file in `dat` goes into the dat subfolder.)
 2. Put your MHF client files into the respective folders.
 3. Run `genMhfKey.py` to generate the `key.txt` file.
