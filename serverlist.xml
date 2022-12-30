@@ -9,5 +9,6 @@
   <group idx='6' nam='Frontier (EU)' ip='178.250.174.110' port='53312' svid='frontiereu'/>
   <group idx='7' nam='Rain (US)' ip='192.241.139.143' port='53312' svid='rain'/>
   <group idx='8' nam='Rain (EU)' ip='165.232.64.11' port='53312' svid='rain'/>
+  <group idx='9' nam='Ancient (SA)' ip='18.229.162.214' port='53312' svid='ancient'/>
   <group idx='99' nam='Custom' ip='erupe.custom' port='53312' svid='custom'/>
 </server_groups>

@@ -1334,6 +1334,9 @@ function printSrvMsg(e) {
         case 'frontiereu':
             addLogMsg("Frontier EU Discord: /6xu748Pw2q", "y");
             break;
+        case 'ancient':
+            addLogMsg("Ancient Warriors Discord: /csR8RPg", "y");
+            break;
         case 'custom':
             addLogMsg("erupe.custom must be set in hosts!", "y");
             break;
