@@ -1331,9 +1331,6 @@ function printSrvMsg(e) {
         case 'renewal':
             addLogMsg("Renewal Discord: /u9Jyenppx7", "y");
             break;
-        case 'frontiereu':
-            addLogMsg("Frontier EU Discord: /6xu748Pw2q", "y");
-            break;
         case 'ancient':
             addLogMsg("Ancient Warriors Discord: /csR8RPg", "y");
             break;
