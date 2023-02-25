@@ -751,21 +751,35 @@ var _CHR_CRR = 0,
 function convWpType(e) {
     "use strict";
     var E = {
+        "Sword%20%26%20Shield": "onehandsword",
         "%E7%89%87%E6%89%8B%E5%89%A3": "onehandsword",
+        "Dual%20Swords": "twinsword",
         "%E5%8F%8C%E5%89%A3": "twinsword",
+        "Great%20Sword": "largesword",
         "%E5%A4%A7%E5%89%A3": "largesword",
+        "Long%20Sword": "longsword",
         "%E5%A4%AA%E5%88%80": "longsword",
+        "Hammer": "hammer",
         "%E3%83%8F%E3%83%B3%E3%83%9E%E3%83%BC": "hammer",
+        "Hunting%20Horn": "horn",
         "%E7%8B%A9%E7%8C%9F%E7%AC%9B": "horn",
+        "Lance": "lance",
         "%E3%83%A9%E3%83%B3%E3%82%B9": "lance",
+        "Gunlance": "gunlance",
         "%E3%82%AC%E3%83%B3%E3%83%A9%E3%83%B3%E3%82%B9": "gunlance",
+        "Tonfa": "senryukon",
         "%E7%A9%BF%E9%BE%8D%E6%A3%8D": "senryukon",
+        "Switch%20Axe%20F": "slashaxe",
         "%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%82%A2%E3%83%83%E3%82%AF%E3%82%B9": "slashaxe",
         "%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%82%A2%E3%83%83%E3%82%AF%E3%82%B9F": "slashaxe",
         "%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%82%A2%E3%83%83%E3%82%AF%E3%82%B9%EF%BC%A6": "slashaxe",
+        "Magnet%20Spike": "magnetspike",
         "%E3%83%9E%E3%82%B0%E3%83%8D%E3%83%83%E3%83%88%E3%82%B9%E3%83%91%E3%82%A4%E3%82%AF": "magnetspike",
+        "Light%20Bowgun": "lbowgun",
         "%E3%83%A9%E3%82%A4%E3%83%88%E3%83%9C%E3%82%A6%E3%82%AC%E3%83%B3": "lbowgun",
+        "Heavy%20Bowgun": "hbowgun",
         "%E3%83%98%E3%83%93%E3%82%A3%E3%83%9C%E3%82%A6%E3%82%AC%E3%83%B3": "hbowgun",
+        "Bow": "bow",
         "%E5%BC%93": "bow"
     };
     return E[encodeURIComponent(e)] || ""
@@ -853,38 +867,37 @@ function kdCharSelMode() {
 }
 
 function translateWeapon(e) {
-    switch (e) {
-        case '片手剣':
-            return 'Sword & Shield';
-        case '双剣':
-            return 'Dual Swords';
-        case '大剣':
-            return 'Greatsword';
-        case '太刀':
-            return 'Longsword';
-        case 'ハンマー':
-            return 'Hammer';
-        case '狩猟笛':
-            return 'Hunting Horn';
-        case 'ランス':
-            return 'Lance';
-        case 'ガンランス':
-            return 'Gunlance';
-        case '穿龍棍':
-            return 'Tonfa';
-        case 'スラッシュアックスＦ':
-            return 'Switch Axe F';
-        case 'マグネットスパイク':
-            return 'Magnet Spike';
-        case 'ヘビィボウガン':
-            return 'Heavy Bowgun';
-        case 'ライトボウガン':
-            return 'Light Bowgun';
-        case '弓':
-            return 'Bow';
-        default:
-            return 'Unknown';
-    }
+    var E = {
+        'Sword & Shield': 'Sword & Shield',
+        '片手剣': 'Sword & Shield',
+        'Dual Swords': 'Dual Swords',
+        '双剣': 'Dual Swords',
+        'Great Sword': 'Great Sword',
+        '大剣': 'Great Sword',
+        'Long Sword': 'Long Sword',
+        '太刀': 'Long Sword',
+        'Hammer': 'Hammer',
+        'ハンマー': 'Hammer',
+        'Hunting Horn': 'Hunting Horn',
+        '狩猟笛': 'Hunting Horn',
+        'Lance': 'Lance',
+        'ランス': 'Lance',
+        'Gunlance': 'Gunlance',
+        'ガンランス': 'Gunlance',
+        'Tonfa': 'Tonfa',
+        '穿龍棍': 'Tonfa',
+        'Switch Axe F': 'Switch Axe F',
+        'スラッシュアックスＦ': 'Switch Axe F',
+        'Magnet Spike': 'Magnet Spike',
+        'マグネットスパイク': 'Magnet Spike',
+        'Heavy Bowgun': 'Heavy Bowgun',
+        'ヘビィボウガン': 'Heavy Bowgun',
+        'Light Bowgun': 'Light Bowgun',
+        'ライトボウガン': 'Light Bowgun',
+        'Bow': 'Bow',
+        '弓': 'Bow'
+    };
+    return E[e] || "Unknown"
 }
 
 function showCharSelector() {
