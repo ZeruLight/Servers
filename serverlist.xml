@@ -4,7 +4,7 @@
   <group idx='1' nam='Localhost' ip='127.0.0.1' port='53312' svid='local' cog='pre'/>
   <group idx='2' nam='Rain (JP)' ip='103.30.195.235' port='53312' svid='rain'/>
   <group idx='3' nam='Hunsterverse (US)' ip='129.213.54.221' port='53312' svid='hv'/>
-  <group idx='4' nam='Renewal (US)' ip='70.80.86.153' port='53312' svid='renewal'/>
+  <group idx='4' nam='Renewal (US)' ip='70.80.86.24' port='53312' svid='renewal'/>
   <group idx='5' nam='Arca (SA)' ip='177.71.205.61' port='53312' svid='arca'/>
   <group idx='7' nam='Rain (US)' ip='206.189.225.228' port='53312' svid='rain'/>
   <group idx='8' nam='Rain (EU)' ip='134.122.76.222' port='53312' svid='rain'/>
