@@ -9,5 +9,6 @@
   <group idx='7' nam='Rain (US)' ip='206.189.225.228' port='53312' svid='rain'/>
   <group idx='8' nam='Rain (EU)' ip='134.122.76.222' port='53312' svid='rain'/>
   <group idx='9' nam='Ancient (SA)' ip='18.229.162.214' port='53312' svid='ancient'/>
+  <group idx='10' nam='Hunter&apos;s Pariadise (EU)' ip='109.190.118.174' port='53312' svid='naga'/>
   <group idx='99' nam='Custom' ip='erupe.custom' port='53312' svid='custom'/>
 </server_groups>
