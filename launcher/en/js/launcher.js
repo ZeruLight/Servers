@@ -1348,7 +1348,7 @@ function printSrvMsg(e) {
             addLogMsg("Ancient Warriors Discord: /csR8RPg", "y");
             break;
         case 'naga':
-            addLogMsg("Hunter's Pariadise Discord: /9HMndFqfSa");
+            addLogMsg("Hunter's Pariadise Discord: /9HMndFqfSa", "y");
             break;
         case 'custom':
             addLogMsg("erupe.custom must be set in hosts!", "y");
