@@ -32,7 +32,7 @@ This is a publicly hosted launcher server for Erupe. This is able to be connecte
 
 # MHF Screenshot BBS API
 ### Requirements
-* PHP
+* PHP (+ cURL Extension)
 * Discord Webhook URL
 ### Usage
 1. Edit [upload.php](api/ss/bbs/upload.php), pasting your Webhook URL into the field.
