@@ -45,5 +45,5 @@ with Pool() as pool:
         dfn = filename.replace('/', '\\')[7:]
         key.add(f'{crc},{filetime[4:8].hex().upper()},{filetime[0:4].hex().upper()},{dfn},{size},0\n')
 
-with open('key.txt', 'w') as fp:
+with open('key00.txt', 'w') as fp:
     fp.write(''.join(key))
