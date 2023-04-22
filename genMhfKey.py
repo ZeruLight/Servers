@@ -1,6 +1,16 @@
 import os
 import zlib
+import sys
+import hashlib
 from multiprocessing import Pool
+
+
+def sha256(file):
+    with open(file.filename, 'rb') as fp:
+        s = fp.read()
+        h = hashlib.sha256()
+        h.update(s)
+    return h.hexdigest().upper()
 
 
 def crc32(file):
@@ -19,15 +29,29 @@ def filetime(file):
 
 
 def fileinfo(file):
-    return crc32(file), filetime(file), file.filename, file.size
+    if target == '51':
+        filehash = sha256(file)
+    else:
+        filehash = crc32(file)
+    return filehash, filetime(file), file.filename, file.size
 
 
 class MhfFile:
-    def __init__(self, filename, size):
-        self.filename = filename
-        self.size = size
+    def __init__(self, _filename, _size):
+        self.filename = _filename
+        self.size = _size
 
 
+target = ''
+if len(sys.argv) == 2:
+    target = sys.argv[1]
+else:
+    target = '00'
+
+if target == '51':
+    print('Targeting PS3, using SHA256')
+else:
+    print('Targeting PC, using CRC32')
 key = set()
 files = set()
 for r, _, f in os.walk('mhfdat', topdown=False):
@@ -45,5 +69,5 @@ with Pool() as pool:
         dfn = filename.replace('/', '\\')[7:]
         key.add(f'{crc},{filetime[4:8].hex().upper()},{filetime[0:4].hex().upper()},{dfn},{size},0\n')
 
-with open('key00.txt', 'w') as fp:
+with open(f'key{target}.txt', 'w') as fp:
     fp.write(''.join(key))
