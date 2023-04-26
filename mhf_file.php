@@ -3,7 +3,7 @@
 if (isset($_GET['key'])) {
 	$platform = "00";
 	// PS3 override stub
-	if ($_SERVER['HTTP_HOST'] == 'ps3.zerulight.cc') {
+	if ($_SERVER['HTTP_HOST'] == 'ps3-en.zerulight.cc' || $_SERVER['HTTP_HOST'] == 'ps3-jp.zerulight.cc') {
 		$platform = "51";
 	}
 	header(sprintf('Content-Disposition: inline; filename="MHFUP_%s.DAT"', $platform));
