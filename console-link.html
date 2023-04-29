@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Erupe Account Link</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            background-color: #ccc2bc;
+            font-family: "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+            width: 560px;
+            height: 372px;
+            position: absolute;
+            top: 40px;
+            left: 130px;
+        }
+        h1 {
+            padding-top: 20px;
+            text-align: center;
+        }
+        h2 {
+            padding-top: 10px;
+        }
+        #main div {
+            padding-top: 90px;
+            padding-left: 90px;
+            padding-right: 90px;
+        }
+        label {
+            display: inline-block;
+            font-weight: bold;
+            width: 120px;
+        }
+        input {
+            width: 250px;
+            line-height: 2em;
+        }
+        button {
+            font-weight: bold;
+            width: 100%;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body style="background-color:dimgray;">
+
+<div id="main">
+    <h1>Link Erupe Account to PSN</h1>
+    <div>
+        <label for="user">User ID</label>
+        <input id="user">
+        <br><br>
+        <label for="pass">Password</label>
+        <input id="pass" type="password">
+        <br><br><br>
+        <button onClick="link()"><h2>Link Account</h2></button>
+
+    </div>
+</div>
+
+<script>
+    var user = document.getElementById("user");
+    var pass = document.getElementById("pass");
+
+    function link() {
+        window.external.mhfBrowserSetCOGId(user.value);
+        window.external.mhfBrowserSetCOGPass(pass.value);
+        // window.external.mhflCopy();
+        window.external.endCogAuth(window.external.mhfBrowserGetCOGId()+"\n"+window.external.mhfBrowserGetCOGPass());
+    }
+    user.value = window.external.mhfBrowserGetCOGId();
+    pass.value = window.external.mhfBrowserGetCOGPass();
+</script>
+
+</body>
+</html>
