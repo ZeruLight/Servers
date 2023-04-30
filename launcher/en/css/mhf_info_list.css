@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+/* メンバートップ用 */
 #center_contents_main #info_table table{width:440px; margin-left:5px; border:none}
 #center_contents_main #info_table table td.date{padding-left:1px;}
 #center_contents_main #info_table table td.info_body{line-height:1.3em}
@@ -7,6 +8,7 @@
 #center_contents_main #info_table table.normal_info_head{background:url(../images/launcher_list/title_bg.gif) no-repeat; margin-left:10px}
 #center_contents_main #info_table table.normal_info{margin-left:10px}
 
+/* ランチャー用 */
 #launcher_middle .info_table table{width:468px; margin-left:22px; border:none}
 #launcher_middle .info_table table td.info_date{padding-left:19px;}
 #launcher_middle .info_table table.normal_info_head{background:url(../images/launcher_list/title_bg_w.gif) no-repeat;}
@@ -22,21 +24,34 @@
 td.info_date{text-align:left; vertical-align:top; width:80px}
 td.info_body{text-align:left; vertical-align:top}
 td.info_icon{text-align:left; vertical-align:top; width:32px}
+td.info_icon .icon{background:url(../images/launcher_list/new.gif) no-repeat; width:32px; height:14px}
 
+table.important_info_head{height:24px; background:url(../images/launcher_list/title_bg_j.gif) repeat-x;}
+table.important_info_head div.lbl{background-image:url(../images/launcher_list/inform_j.gif); width:110px; height:20px; margin-left:23px}
 table.important_info{background-color:#F0C0C0;}
 table.normal_info_head{height:24px; position:relative}
 table.normal_info_head td.lbl{position:relative}
 table.normal_info_head td.lbl a{background:url(../images/launcher_list/more.gif) no-repeat; width:42px; height:20px; margin-right:23px; position:absolute; right:0; top:0;}
-table.normal_info_head td.lbl div{background:no-repeat; width:107px; height:20px; margin-left:23px; width:260px}
+table.normal_info_head td.lbl div{background:no-repeat;  width:260px; height:20px; margin-left:23px;}
+table.normal_info_head td.lbl div.bug_trouble_lbl{background-image:url(../images/launcher_list/bug_trouble.gif);}
+table.normal_info_head td.lbl div.info_lbl{background-image:url(../images/launcher_list/informatiion.gif);}
+table.normal_info_head td.lbl div.game_event_lbl{background-image:url(../images/launcher_list/game_event.gif);}
+table.normal_info_head td.lbl div.campaign_lbl{background-image:url(../images/launcher_list/campaign.gif);}
+table.normal_info_head td.lbl div.system_lbl{background-image:url(../images/launcher_list/system.gif);}
+table.normal_info_head td.lbl div.other_news_lbl{background-image:url(../images/launcher_list/other_news.gif);}
 table.normal_info{background:none}
 
 
+/* 真・メンバートップ用 */
 .important_info{width:440px; margin-left:5px; margin-bottom:14px; background-color:#F0C0C0; position:relative;}
+.important_info .head{background:url(../images/launcher_list/title_bg_j.gif) repeat-x; position:relative; width:440px; padding-top:2px; height: 22px;}
+.important_info .head .lbl{background-image: url(../images/launcher_list/inform_j.gif); width:110px; height:20px; position:relative; margin-left:23px;}
 .normal_info{width:440px; margin-left:10px; margin-bottom:14px; }
 
 .normal_info .head{background:url(../images/launcher_list/title_bg.gif) no-repeat 0px 0px; width:440px; height:24px; position:relative;}
 .normal_info .head a{background:url(../images/launcher_list/more.gif) no-repeat; width:42px; height: 20px; margin-right:23px; position:absolute; right:0; top:3px;}
 .normal_info .head .lbl{background:no-repeat 0px 2px; width:107px; height: 22px; margin-left:23px; width: 260px;}
+.normal_info .head .bug_trouble{background-image:url(../images/launcher_list/bug_trouble.gif);}
 .normal_info .head .info{background-image:url(../images/launcher_list/informatiion.gif);}
 .normal_info .head .game_event{background-image:url(../images/launcher_list/game_event.gif);}
 .normal_info .head .campaign{background-image:url(../images/launcher_list/campaign.gif);}
@@ -50,6 +65,7 @@ ul.article li .date{width:80px; line-height:1.2em; float:left;}
 ul.article li .body{width:306px; line-height:1.2em; float:left;}
 ul.article li .icon{width:32px; height:14px; background:url(../images/launcher_list/new.gif) no-repeat 0px 0px; margin-left:6px; float:left;}
 
+/* 真・ランチャー用 */
 #launcher_middle{padding-bottom:5px;}
 #launcher_middle .important_info{width:468px; margin-left:22px;}
 #launcher_middle .important_info .head{width:468px; display:none;}
