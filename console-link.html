@@ -64,12 +64,11 @@
 <script>
     var user = document.getElementById("user");
     var pass = document.getElementById("pass");
-
     function link() {
         window.external.mhfBrowserSetCOGId(user.value);
         window.external.mhfBrowserSetCOGPass(pass.value);
         // window.external.mhflCopy();
-        window.external.endCogAuth(window.external.mhfBrowserGetCOGId()+"\n"+window.external.mhfBrowserGetCOGPass());
+        window.external.endCogAuth(user.value+"\n"+pass.value);
     }
     user.value = window.external.mhfBrowserGetCOGId();
     pass.value = window.external.mhfBrowserGetCOGPass();
