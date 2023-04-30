@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0; border:none;}
+html{width:100%; height:100%}
+body{width:100%; height:100%;background-color:#000;}
+
+#main{background:#000 url(../img/body_bg_phase3.jpg) no-repeat 0px 0px; position:relative; width:840px; height:440px; margin:0 auto; overflow:hidden;}
+#top_btns{position:absolute; left:3px; top:5px; width:557px; height:44px;}
+#top_btns i{position:absolute; top:0; display:block; width:92px; height:44px; background:no-repeat 0px 0px;}
+#top_btns i:hover{background-position:0px -44px;}
+#top_btns i.btnMember{background-image:url(../img/top_btn/phase3_0_mem.jpg); width:97px; left:0;}
+#top_btns i.btnPayment{background-image:url(../img/top_btn/phase2_1_pay.jpg); left:97px;}
+#top_btns i.btnCoupon{background-image:url(../img/top_btn/phase3_2_mp.jpg); left:189px;}
+#top_btns i.btnManual{background-image:url(../img/top_btn/phase2_2_manu.jpg); left:281px;}
+#top_btns i.btnInquiry{background-image:url(../img/top_btn/phase2_3_inq.jpg); left:373px;}
+#top_btns i.btnRule{background-image:url(../img/top_btn/phase2_4_rule.jpg); left:465px;}
+
+
+#info_area{ position:absolute; left:23px; top:88px; border:1px #402F21 solid; border-bottom-color:#DDD0B4; border-left-color:#7B614B; border-right-color:#A0997A;}
+
+#bnr{width:556px; height:62px; overflow:hidden; position:absolute; left:4px; top:375px;}
+#bnr i{float:left; display:block; width:138px; height:62px; background:no-repeat 0px 0px;}
+#bnr i:first-child{width:139px;}
+#bnr i:hover{background-position:0px -62px;}
+
+i#btnCouponBln{display:block; width:93px; height:44px; position:absolute; right:37px; top:208px; background:url(../img/top_btn/balloon_mp_phase3.jpg) no-repeat 0px 0px;}
+i#btnCouponBln:hover{background-position:0 -44px;}
