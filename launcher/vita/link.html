@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta http-equiv="content-script-type" content="text/javascript">
+    <meta name="robots" content="noindex,nofollow" />
+    <title>PS Vita版：MHF-Ｚ</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css?d=0820">
+    <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/gao.js"></script>
+    <style type="text/css">
+        body {background:#000 url(img/lnk/bg.jpg) repeat center center;}
+    </style>
+</head>
+
+<body>
+<div id="main_sen">
+    <div id="title_sen_no"></div>
+    <div id="sen">
+        <div id="head_sen">
+            <div class="ft">
+                <p>Erupe Account Login</p>
+            </div>
+        </div>
+        <form action="">
+            <div id="sect_sen">
+                <div class="section">
+                    <div class="sect_t"><label for="member_id">User ID</label></div>
+                    <div class="sect_c"><input id="member_id" type="text" name="member_id" value="" maxlength="16"></div>
+                </div>
+                <div class="section">
+                    <div class="sect_t"><label for="member_pw">Password</label></div>
+                    <div class="sect_c"><input id="member_pw" type="password" name="member_pw" value="" maxlength="16" autocomplete="off"></div>
+                </div>
+            </div>
+            <div id="footer_sen">
+                <a onclick="link()"><img src="img/lnk/btn.jpg" alt="Link Account" width="225" height="45"></a>
+            </div>
+            <span class="red"></span>
+        </form>
+    </div>
+</div>
+
+<script>
+    var user = document.getElementById("member_id");
+    var pass = document.getElementById("member_pw");
+    function link() {
+        window.external.mhfBrowserSetCOGId(user.value);
+        window.external.mhfBrowserSetCOGPass(pass.value);
+        // window.external.mhflCopy();
+        window.external.endCogAuth(user.value+"\n"+pass.value);
+    }
+    user.value = window.external.mhfBrowserGetCOGId();
+    pass.value = window.external.mhfBrowserGetCOGPass();
+</script>
+
+</body>
+</html>
