@@ -1,78 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Erupe Account Link</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
+    <title>Redirecting...</title>
+    <script>
+        window.env = {};
+        _ua = navigator.userAgent;
+        window.env.isPS3Con  = (_ua.indexOf('MHF-PS3') > -1) ? 1 : 0;
+        window.env.isPSVCon  = (_ua.indexOf('MHF-VITA') > -1) ? 1 : 0;
+        window.env.isXboxCon = (_ua.indexOf('MHF-Xbox360') > -1) ? 1 : 0;
+
+        if (window.env.isPS3Con) {
+            location.href = "/launcher/ps3/link.html";
+        } else {
+            location.href = "/launcher/vita/link.html";
         }
-        #main {
-            background-color: #ccc2bc;
-            font-family: "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-            width: 560px;
-            height: 372px;
-            position: absolute;
-            top: 40px;
-            left: 130px;
-        }
-        h1 {
-            padding-top: 20px;
-            text-align: center;
-        }
-        h2 {
-            padding-top: 10px;
-        }
-        #main div {
-            padding-top: 90px;
-            padding-left: 90px;
-            padding-right: 90px;
-        }
-        label {
-            display: inline-block;
-            font-weight: bold;
-            width: 120px;
-        }
-        input {
-            width: 250px;
-            line-height: 2em;
-        }
-        button {
-            font-weight: bold;
-            width: 100%;
-            height: 40px;
-        }
-    </style>
+    </script>
 </head>
-
-<body style="background-color:dimgray;">
-
-<div id="main">
-    <h1>Link Erupe Account to PSN</h1>
-    <div>
-        <label for="user">User ID</label>
-        <input id="user">
-        <br><br>
-        <label for="pass">Password</label>
-        <input id="pass" type="password">
-        <br><br><br>
-        <button onClick="link()"><h2>Link Account</h2></button>
-
-    </div>
-</div>
-
-<script>
-    var user = document.getElementById("user");
-    var pass = document.getElementById("pass");
-    function link() {
-        window.external.mhfBrowserSetCOGId(user.value);
-        window.external.mhfBrowserSetCOGPass(pass.value);
-        // window.external.mhflCopy();
-        window.external.endCogAuth(user.value+"\n"+pass.value);
-    }
-    user.value = window.external.mhfBrowserGetCOGId();
-    pass.value = window.external.mhfBrowserGetCOGPass();
-</script>
-
-</body>
 </html>
