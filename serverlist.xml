@@ -10,6 +10,6 @@
   <group idx='8' nam='Rain (EU)' ip='134.122.76.222' port='53312' svid='rain' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='9' nam='Ancient (SA)' ip='18.229.162.214' port='53312' svid='ancient' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='10' nam='Hunters Pariadise (EU)' ip='109.190.118.174' port='53312' svid='naga' oauth_url='zerulight.cc/console-link.html'/>
-  <group idx='11' nam='Quick Hunt (US)' ip='51.81.33.197' port='53312' svid='quik' oauth_url='zerulight.cc/console-link.html'/>
+  <group idx='11' nam='Quick Hunt (US)' ip='35.133.218.93' port='53312' svid='quik' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='99' nam='Custom' ip='erupe.custom' port='53312' svid='custom' oauth_url='zerulight.cc/console-link.html'/>
 </server_groups>
