@@ -1350,6 +1350,9 @@ function printSrvMsg(e) {
         case 'naga':
             addLogMsg("Hunter's Pariadise Discord: /9HMndFqfSa", "y");
             break;
+        case 'doom':
+            addLogMsg("DoomServer Discord: /b3tXg4Vmce", "y");
+            break;
         case 'quik':
             addLogMsg("Quick Hunt Discord: /G6HrJk7BBc", "y");
             break;

@@ -11,5 +11,6 @@
   <group idx='9' nam='Ancient (SA)' ip='34.201.100.139' port='53312' svid='ancient' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='10' nam='Hunters Pariadise (EU)' ip='109.190.118.174' port='53312' svid='naga' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='11' nam='Quick Hunt (US)' ip='35.133.218.93' port='53312' svid='quik' oauth_url='zerulight.cc/console-link.html'/>
+  <group idx='12' nam='DoomServer (RU)' ip='193.124.64.139' port='53312' svid='doom' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='99' nam='Custom' ip='erupe.custom' port='53312' svid='custom' oauth_url='zerulight.cc/console-link.html'/>
 </server_groups>
