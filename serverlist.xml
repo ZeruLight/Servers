@@ -2,14 +2,16 @@
 <server_groups>
   <group idx='0' nam='Select a Server' ip=''/>
   <group idx='1' nam='Localhost' ip='127.0.0.1' port='53312' svid='local' cog='pre' oauth_url='zerulight.cc/console-link.html'/>
-  <group idx='2' nam='Rain (JP)' ip='128.199.76.156' port='53312' svid='rain' oauth_url='zerulight.cc/console-link.html'/>
+  <group idx='2' nam='Rain (JP)' ip='103.150.191.107' port='53312' svid='rain' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='3' nam='Hunsterverse (US)' ip='129.213.54.221' port='53312' svid='hv' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='4' nam='Renewal (US)' ip='70.80.86.24' port='53312' svid='renewal' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='5' nam='Arca (SA)' ip='177.71.205.61' port='53312' svid='arca' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='7' nam='Rain (US)' ip='206.189.225.228' port='53312' svid='rain' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='8' nam='Rain (EU)' ip='134.122.76.222' port='53312' svid='rain' oauth_url='zerulight.cc/console-link.html'/>
-  <group idx='9' nam='Ancient (SA)' ip='18.229.162.214' port='53312' svid='ancient' oauth_url='zerulight.cc/console-link.html'/>
+  <group idx='9' nam='Ancient (SA)' ip='34.201.100.139' port='53312' svid='ancient' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='10' nam='Hunters Pariadise (EU)' ip='109.190.118.174' port='53312' svid='naga' oauth_url='zerulight.cc/console-link.html'/>
-  <group idx='11' nam='Wild Hunters (CU)' ip='152.206.201.134' port='53312' svid='naga' oauth_url='zerulight.cc/console-link.html'/>
+  <group idx='11' nam='Quick Hunt (US)' ip='35.133.218.93' port='53312' svid='quik' oauth_url='zerulight.cc/console-link.html'/>
+  <group idx='12' nam='DoomServer (RU)' ip='193.124.64.139' port='53312' svid='doom' oauth_url='zerulight.cc/console-link.html'/>
+  <group idx='13' nam='Wild Hunters (CU)' ip='152.206.201.134' port='53312' svid='wild' oauth_url='zerulight.cc/console-link.html'/>
   <group idx='99' nam='Custom' ip='erupe.custom' port='53312' svid='custom' oauth_url='zerulight.cc/console-link.html'/>
 </server_groups>
