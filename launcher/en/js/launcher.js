@@ -1351,7 +1351,10 @@ function printSrvMsg(e) {
             addLogMsg("Hunter's Pariadise Discord: /9HMndFqfSa", "y");
             break;
         case 'doom':
-            addLogMsg("DoomServer #1 Дискорд: /b3tXg4Vmce", "y");
+            addLogMsg("DoomServer Discord: /b3tXg4Vmce", "y");
+            break;
+        case 'quik':
+            addLogMsg("Quick Hunt Discord: /G6HrJk7BBc", "y");
             break;
         case 'custom':
             addLogMsg("erupe.custom must be set in hosts!", "y");
