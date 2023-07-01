@@ -1350,6 +1350,9 @@ function printSrvMsg(e) {
         case 'naga':
             addLogMsg("Hunter's Pariadise Discord: /9HMndFqfSa", "y");
             break;
+        case 'quik':
+            addLogMsg("Quick Hunt Discord: /G6HrJk7BBc", "y");
+            break;
         case 'custom':
             addLogMsg("erupe.custom must be set in hosts!", "y");
             break;
