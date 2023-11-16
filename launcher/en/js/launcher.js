@@ -1359,6 +1359,9 @@ function printSrvMsg(e) {
         case 'wild':
             addLogMsg("Wild Hunters Discord: /S2g97pTgAU", "y");
             break;
+        case 'f5g7':
+            addLogMsg("Forward.Fivers Discord: /dptGmF9xBd", "y");
+            break;
         case 'custom':
             addLogMsg("erupe.custom must be set in hosts!", "y");
             break;
