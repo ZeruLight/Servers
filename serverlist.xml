@@ -13,6 +13,7 @@
   <group idx='11' nam='Quick Hunt (US)' ip='51.222.141.109' port='53312' svid='quik' oauth_url='debug-www.mhf-g.com/console-link.html'/>
   <group idx='12' nam='DoomServer (RU)' ip='193.124.64.139' port='53312' svid='doom' oauth_url='debug-www.mhf-g.com/console-link.html'/>
   <group idx='13' nam='Wild Hunters (CU)' ip='152.206.201.134' port='53312' svid='wild' oauth_url='debug-www.mhf-g.com/console-link.html'/>
+  <group idx='14' nam='Fivers.G7 Test (CA)' ip='129.153.57.148' port='54312' svid='f5g7' oauth_url='debug-www.mhf-g.com/console-link.html'/>
   <!--group idx='98' nam='GG Test (AU)' ip='sek.ai' port='53312' svid='' oauth_url='debug-www.mhf-g.com/console-link.html'/-->
   <group idx='99' nam='Custom' ip='erupe.custom' port='53312' svid='custom' oauth_url='debug-www.mhf-g.com/console-link.html'/>
 </server_groups>
