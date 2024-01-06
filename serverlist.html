@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MHF Servers</title>
+    <style>
+        * {
+            font-family: sans-serif;
+            background-color: #343536;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+<h1>MHF Public Server List</h1>
+<ul id="list">
+    <li>Loading...</li>
+</ul>
+<script>
+    fetch("../serverlist.xml").then(response => response.text()).then(xml => new window.DOMParser().parseFromString(xml, "text/xml")).then(
+        xml => {
+            let parentNode = document.getElementById("list");
+            let servers = xml.getElementsByTagName("server_groups")[0].getElementsByTagName("group");
+            parentNode.innerHTML = "";
+            for (let i=0; i<servers.length; i++) {
+                let li = document.createElement("li");
+                let ip = servers[i].getAttribute("ip");
+                if (ip !== "") {
+                    li.innerHTML = servers[i].getAttribute("nam") + " - " + servers[i].getAttribute("ip");
+                    parentNode.appendChild(li);
+                }
+            }
+        }
+    );
+</script>
+</body>
+</html>
