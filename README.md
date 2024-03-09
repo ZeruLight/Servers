@@ -25,10 +25,12 @@ This is a publicly hosted launcher server for Erupe. This is able to be connecte
    (Every file in `exe` goes into the root client folder, every file in `dat` goes into the dat subfolder.)
 2. Put your MHF client files into the respective folders.
 3. Run `genMhfKey.py` to generate the `key.txt` file.
-   (This file will need to be re-generated whenever changes are made to the client files.)
+   - This file will need to be re-generated whenever any change is made to the client files.
+   - By default this will use CRC32 for keyfile `00` (PC), to use SHA256 for keyfile `51` (PS3) you need to add `51` at the end of the command.
 4. Add the server address to the PatchServer options in your Erupe config.json file.
    (Your `mhfdat` folder can exist on a raw HTTP (PHP-less) server by specifying `PatchServerFile` to be a different address, `PatchServerManifest` requires PHP to be served.)
-5. Edit [launcher.js](/launcher/en/js/launcher.js), set `updateDisabled` to false.
+5. (for PC) Edit [launcher.js](/launcher/en/js/launcher.js), set `updateDisabled` to false.
+6. (for PS3) Move the `mhfdat` folder and `key.txt` into the `ps3` folder.
 
 # MHF Screenshot BBS API
 ### Requirements
