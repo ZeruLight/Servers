@@ -1342,7 +1342,7 @@ function printSrvMsg(e) {
             addLogMsg("ARCA Discord: /Agjkad7zdU", "y");
             break;
         case 'renewal':
-            addLogMsg("Renewal Discord: /u9Jyenppx7", "y");
+            addLogMsg("Renewal Discord: /U4pjzmzUVx", "y");
             break;
         case 'ancient':
             addLogMsg("Ancient Warriors Discord: /csR8RPg", "y");
