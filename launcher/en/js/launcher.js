@@ -1885,5 +1885,31 @@ $(function () {
         initScrollBar(_SEL_LOG),
         initScrollBar("#launcher_info_detail .article_frame"),
         startExLog(),
-        debugLogMsg("<br>UA > " + String(window.navigator.userAgent), !1)
+        debugLogMsg("<br>UA > " + String(window.navigator.userAgent), !1),
+        setLauncherStyle()
 });
+
+function getLauncherStyle() {
+    readCookie()
+    return _STORAGE["launcherstyle" + _EXE_MUTEX]
+}
+
+function setLauncherStyle() {
+    if (getLauncherStyle() == 1) {
+        $("#launcher_version img").attr("src", "images/logo/001_g.png")
+        $("#launcher_body").css("background-image", "url(images/bg/001.jpg)")
+    } else {
+        $("#launcher_version img").attr("src", "images/logo/000_z.png")
+        $("#launcher_body").css("background-image", "url(images/bg/000.jpg)")
+    }
+}
+
+function switchLauncherStyle() {
+    if (getLauncherStyle() == 1) {
+        _STORAGE["launcherstyle" + _EXE_MUTEX] = 0
+    } else {
+        _STORAGE["launcherstyle" + _EXE_MUTEX] = 1
+    }
+    writeCookie()
+    setLauncherStyle()
+}
