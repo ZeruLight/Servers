@@ -870,8 +870,9 @@ function translateWeapon(e) {
     var E = {
         'Sword & Shield': 'Sword & Shield',
         '片手剣': 'Sword & Shield',
-        'Dual Swords': 'Dual Swords',
-        '双剣': 'Dual Swords',
+        'Dual Blades': 'Dual Blades',
+        'Dual Swords': 'Dual Blades',
+        '双剣': 'Dual Blades',
         'Great Sword': 'Great Sword',
         '大剣': 'Great Sword',
         'Long Sword': 'Long Sword',
