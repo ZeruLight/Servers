@@ -1897,26 +1897,26 @@ function getLauncherStyle() {
 
 function setLauncherStyle() {
     var e = getLauncherStyle()
-    if (e == 0) {
-        $("#launcher_version img").attr("src", "images/logo/000_z.png")
-        $("#launcher_body").css("background-image", "url(images/bg/000.jpg)")
-    } else if (e == 1) {
+    if (e == 1) {
         $("#launcher_version img").attr("src", "images/logo/001_g.png")
         $("#launcher_body").css("background-image", "url(images/bg/001.jpg)")
-    } else {
+    } else if (e == 2) {
         $("#launcher_version img").attr("src", "images/logo/002_f.png")
         $("#launcher_body").css("background-image", "url(images/bg/002.jpg)")
+    } else {
+        $("#launcher_version img").attr("src", "images/logo/000_z.png")
+        $("#launcher_body").css("background-image", "url(images/bg/000.jpg)")
     }
 }
 
 function switchLauncherStyle() {
     var e = getLauncherStyle()
-    if (e == 0) {
-        _STORAGE["launcherstyle" + _EXE_MUTEX] = 1
-    } else if (e == 1) {
+    if (e == 1) {
         _STORAGE["launcherstyle" + _EXE_MUTEX] = 2
-    } else {
+    } else if (e == 2) {
         _STORAGE["launcherstyle" + _EXE_MUTEX] = 0
+    } else {
+        _STORAGE["launcherstyle" + _EXE_MUTEX] = 1
     }
     writeCookie()
     setLauncherStyle()
