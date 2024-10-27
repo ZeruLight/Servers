@@ -4,7 +4,7 @@
   <group idx='1' nam='Localhost' ip='127.0.0.1' port='53312' svid='local' cog='pre' oauth_url='debug-www.mhf-g.com/console-link.html'/>
   <group idx='2' nam='Rain (JP)' ip='103.150.191.107' port='53312' svid='rain' oauth_url='debug-www.mhf-g.com/console-link.html'/>
   <group idx='3' nam='Hunsterverse (US)' ip='129.213.54.221' port='53312' svid='hv' oauth_url='debug-www.mhf-g.com/console-link.html'/>
-  <group idx='4' nam='Renewal (US)' ip='70.80.86.24' port='53312' svid='renewal' oauth_url='debug-www.mhf-g.com/console-link.html'/>
+  <group idx='4' nam='Renewal (US)' ip='5.161.64.71' port='53312' svid='renewal' oauth_url='debug-www.mhf-g.com/console-link.html'/>
   <group idx='5' nam='Arca (SA)' ip='89.116.225.172' port='53312' svid='arca' oauth_url='debug-www.mhf-g.com/console-link.html'/>
   <group idx='7' nam='Rain (US)' ip='193.43.72.186' port='53312' svid='rain' oauth_url='debug-www.mhf-g.com/console-link.html'/>
   <group idx='8' nam='Rain (EU)' ip='193.176.179.82' port='53312' svid='rain' oauth_url='debug-www.mhf-g.com/console-link.html'/>
